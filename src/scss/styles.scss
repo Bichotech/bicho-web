@@ -1,6 +1,32 @@
+@font-face {
+    font-family: 'Rajdhani_Bold';
+    src: url('../assets/fonts/Rajdhani-SemiBold.eot');
+    src: url('../assets/fonts/Rajdhani-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Rajdhani-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/Rajdhani-SemiBold.woff') format('woff'),
+        url('../assets/fonts/Rajdhani-SemiBold.ttf') format('truetype'),
+        url('../assets/fonts/Rajdhani-SemiBold.svg#Rajdhani-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../assets/fonts/Rajdhani-Regular.eot');
+    src: url('../assets/fonts/Rajdhani-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Rajdhani-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Rajdhani-Regular.woff') format('woff'),
+        url('../assets/fonts/Rajdhani-Regular.ttf') format('truetype'),
+        url('../assets/fonts/Rajdhani-Regular.svg#Rajdhani-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rajdhani', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -17,6 +43,10 @@ html, body {
     --black-color: #212121;
     --orange-bixo-color: #FF2F00;
     --gray-bixo-color: #5A5A5A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rajdhani_Bold';
 }
 
 h1 {
@@ -69,10 +99,6 @@ a {
     }
 }
 
-.centered-image {
-    text-align: center;
-}
-
 section {
     width: 100svw;
     height: 100svh;
@@ -80,10 +106,13 @@ section {
     padding: 0;
     display: flex;
     align-items: center;
+    position: relative;
 
     .__bx-paragraph-centered {
         max-width: 56rem;
         margin-left: 100px;
+        position: relative;
+        z-index: 2;
     }
 
     .__bixo-element {
@@ -93,16 +122,22 @@ section {
         position: relative;
         flex-grow: 1;
 
-        &.back-image {
-            background-position: top center;
-            background-size: cover;
-        }
-
         .__bx-paragraph-centered {
             max-width: 56rem;
             margin-left: 100px;
         }
+
+        &.centered-image img {
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+        }
     }
+}
+
+.back-image {
+    background-position: top right;
+    background-size: cover;
 }
 
 .back-orange {
