@@ -1,0 +1,84 @@
+---
+// TOP NAV
+import { Image } from 'astro:assets';
+import LogoBixo from '../assets/images/logo_bixo.svg';
+---
+<nav>
+    <div class="logo">
+        <Image src={LogoBixo} alt="BichoTech, agencia interactiva" height="40" />
+    </div>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="" class="selected">Inicio</a>
+            </li>
+            <li>
+                <a href="">Bichotech</a>
+            </li>
+            <li>
+                <a href="">Servicios</a>
+            </li>
+            <li>
+                <a href="">Contacto</a>
+            </li>
+            <li>
+                <a href="">Blog</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style lang="scss">
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100svw;
+        box-sizing: border-box;
+        padding: 1rem 2rem;
+        z-index: 2;
+
+        .logo {
+
+        }
+
+        .menu {
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+
+                li {
+                    a {
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        letter-spacing: 0.2rem;
+                        font-weight: 700;
+                        text-decoration: none;
+                        box-sizing: border-box;
+                        padding: 0.4rem 0.8rem;
+                        display: block;
+                        border-radius: 4px;
+                        background-color: transparent;
+                        transition: all 0.4s ease-in-out;
+                        color: var(--gray-bixo-color);
+
+                        &.selected {
+                            background-color: rgba(0, 0 ,0 , 0.1);
+                            color: var(--orange-bixo-color);
+                        }
+
+                        &:hover {
+                            background-color: rgba(0, 0 ,0 , 0.1);
+                            color: var(--orange-bixo-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
