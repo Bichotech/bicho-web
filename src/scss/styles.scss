@@ -24,6 +24,19 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Bahiana';
+    src: url('../assets/fonts/Bahiana-Regular.eot');
+    src: url('../assets/fonts/Bahiana-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Bahiana-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Bahiana-Regular.woff') format('woff'),
+        url('../assets/fonts/Bahiana-Regular.ttf') format('truetype'),
+        url('../assets/fonts/Bahiana-Regular.svg#Bahiana-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     font-size: 10px;
     font-family: 'Rajdhani', Arial, Helvetica, sans-serif;
@@ -45,20 +58,24 @@ html, body {
     --gray-bixo-color: #5A5A5A;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rajdhani_Bold';
+h1, h2, h3 {
+    font-family: 'Bahiana', Arial, Helvetica, sans-serif;
+}
+
+h4, h5, h6 {
+    font-family: 'Rajdhani_Bold', Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 3.2rem;
+    font-size: 4.2rem;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 3.6rem;
 }
 
 h4 {

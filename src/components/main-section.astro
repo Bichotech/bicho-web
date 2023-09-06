@@ -1,0 +1,27 @@
+---
+// COMPONENT: MAIN SECTION
+const { title, background } = Astro.props;
+const backgroundImage = "background-image: url('/src/assets/images/" + background + "');";
+---
+
+<section id="__bx-main-section" class="back-image" style={ backgroundImage }>
+    <div class="overlay"></div>
+
+    <div class="__bx-paragraph-centered">
+        <h2>{title}</h2>
+    </div>
+</section>
+
+<style lang="scss">
+    #__bx-main-section {
+        background-color: var(--black-color);
+
+        .__bx-paragraph-centered {
+            color: #ffffff;
+        }
+
+        &.back-image {
+            background-image: url('../assets/images/index-img.jpg');
+        }
+    }
+</style>

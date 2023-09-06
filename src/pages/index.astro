@@ -2,18 +2,33 @@
 import Layout from '../layouts/Layout.astro';
 // SECTIONS
 import InitialSection from '../sections/initial-section.astro';
-import SomosSection from '../sections/quienes-somos.astro';
-import EstrategiaSection from '../sections/estrategia.astro';
 import BienvenidoSection from '../sections/bienvenido.astro';
+
+import MainSection from '../components/main-section.astro';
+import SimpleSection from '../components/simple-section.astro';
 ---
 
 <Layout title="Bienvenido a BichoTech, agencia interactiva especialista en creación de estrategias para publicidad y presencia en medios electrónicos.">
 	
-	<InitialSection />
+	<!-- <InitialSection title="" /> -->
+	<MainSection
+			title="Nuestra responsabilidad es darle a su marca impacto digital y gráfico, nuestra misión es convertirnos en su equipo creativo."
+			background="index-img.jpg" />
 
-	<SomosSection />
+	<SimpleSection
+			title="Nos gusta despertar en nuestros clientes el amor a la creatividad funcional"
+			content="Somos ambiciosos y llevamos la creatividad al máximo"
+			button="&iquest;Quienes Somos?"
+			link="#"
+			subtitle=""
+			background="building-2.jpg" />
 
-	<EstrategiaSection />
+	<SimpleSection
+			title = "De la estrategia a la ejecución"
+			content = "Creamos procesos probados para ayudar a nuestros clientes a identificar las posibles áreas de oportunidad para crear experiencias visuales de sus marcas y productos."button="&iquest;Quienes Somos?"
+			button = ""
+			subtitle=""
+			background="buildings_city.jpg" />
 
 	<BienvenidoSection />
 
