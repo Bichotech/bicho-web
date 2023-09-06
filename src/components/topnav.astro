@@ -2,6 +2,8 @@
 // TOP NAV
 import { Image } from 'astro:assets';
 import LogoBixo from '../assets/images/logo_bixo.svg';
+
+const pathname = Astro.url.pathname;
 ---
 <nav>
     <div class="logo">
@@ -10,19 +12,19 @@ import LogoBixo from '../assets/images/logo_bixo.svg';
     <div class="menu">
         <ul>
             <li>
-                <a href="/" class="selected">Inicio</a>
+                <a href="/" id="home" class="menu-item" data-currentPath={pathname}>Inicio</a>
             </li>
             <li>
-                <a href="">Bichotech</a>
+                <a href="/bichotech/" id="bichotech" class="menu-item" data-currentPath={pathname}>Bichotech</a>
             </li>
             <li>
-                <a href="">Servicios</a>
+                <a href="" id="" class="menu-item" data-currentPath={pathname}>Servicios</a>
             </li>
             <li>
-                <a href="">Contacto</a>
+                <a href="" id="" class="menu-item" data-currentPath={pathname}>Contacto</a>
             </li>
             <li>
-                <a href="">Blog</a>
+                <a href="" id="" class="menu-item" data-currentPath={pathname}>Blog</a>
             </li>
         </ul>
     </div>
@@ -83,3 +85,18 @@ import LogoBixo from '../assets/images/logo_bixo.svg';
         }
     }
 </style>
+
+<script>
+    const menuItems = document.querySelectorAll('a.menu-item');
+
+    menuItems.forEach(el => {
+        let pathname = el.getAttribute('data-currentPath');
+
+        if ( pathname === '/' ){
+            document.querySelector('#home')?.classList.add('selected');
+        }
+        if ( pathname === '/bichotech/' ){
+            document.querySelector('#bichotech')?.classList.add('selected');
+        }
+    });
+</script>
