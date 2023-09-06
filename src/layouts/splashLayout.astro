@@ -1,0 +1,25 @@
+--- 
+import '../scss/styles.scss';
+// import TopNav from '../components/topnav.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Agencia interactiva especialista en creación de estrategias publicidad y presencia en medios electrónicos.">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<!-- <TopNav /> -->
+		<slot />
+	</body>
+</html>
