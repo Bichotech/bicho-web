@@ -1,15 +1,16 @@
 ---
-import SplashLayout from '../layouts/splashLayout.astro';
-// SECTIONS
-import BienvenidoSection from '../sections/bienvenido.astro';
+// import SplashLayout from '../layouts/splashLayout.astro';
 
+// SECTIONS
+import Layout from '../layouts/Layout.astro';
+import BienvenidoSection from '../sections/bienvenido.astro';
 import MainSection from '../components/main-section.astro';
 import SimpleSection from '../components/simple-section.astro';
 ---
 
-<SplashLayout title="Bienvenido a BichoTech, agencia interactiva especialista en creación de estrategias para publicidad y presencia en medios electrónicos.">
+<Layout title="Bienvenido a BichoTech, agencia interactiva especialista en creación de estrategias para publicidad y presencia en medios electrónicos.">
 	
-	<!-- <MainSection
+	<MainSection
 			title="Nuestra responsabilidad es darle a su marca impacto digital y gráfico, nuestra misión es convertirnos en su equipo creativo."
 			background="index-img.jpg" />
 
@@ -28,38 +29,6 @@ import SimpleSection from '../components/simple-section.astro';
 			subtitle=""
 			background="buildings_city.jpg" />
 
-	<BienvenidoSection /> -->
+	<BienvenidoSection />
 
-	<style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            height: 100svh;
-            width: 100svw;
-            background-color: black;
-            position: relative;
-        }
-        .full-page {
-            background-image: url('/assets/images/splash.jpg');
-            display: inline-block;
-            width: 100%;
-            position: absolute;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-position: center;
-            background-size: cover;
-        }
-        @media screen and (max-width: 680px) {
-            .full-page {
-                background-position: 25%;
-                background-size: cover;
-            }
-        }
-    </style>
-
-    <div class="full-page"></div>
-
-</SplashLayout>
+</Layout>
