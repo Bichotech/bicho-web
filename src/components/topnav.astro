@@ -2,8 +2,6 @@
 // TOP NAV
 import { Image } from 'astro:assets';
 import LogoBixo from '../assets/images/logo_bixo.svg';
-
-const pathname = Astro.url.pathname;
 ---
 <nav>
     <div class="logo">
@@ -12,19 +10,19 @@ const pathname = Astro.url.pathname;
     <div class="menu">
         <ul>
             <li>
-                <a href="/" id="home" class="menu-item" data-currentPath={pathname}>Inicio</a>
+                <a href="/" id="home" class="menu-item">Inicio</a>
             </li>
             <li>
-                <a href="/bichotech/" id="bichotech" class="menu-item" data-currentPath={pathname}>Bichotech</a>
+                <a href="/bichotech/" id="bichotech" class="menu-item">Bichotech</a>
             </li>
             <li>
-                <a href="" id="" class="menu-item" data-currentPath={pathname}>Servicios</a>
+                <a href="" id="" class="menu-item">Servicios</a>
             </li>
             <li>
-                <a href="" id="" class="menu-item" data-currentPath={pathname}>Contacto</a>
+                <a href="" id="" class="menu-item">Contacto</a>
             </li>
             <li>
-                <a href="" id="" class="menu-item" data-currentPath={pathname}>Blog</a>
+                <a href="" id="" class="menu-item">Blog</a>
             </li>
         </ul>
     </div>
