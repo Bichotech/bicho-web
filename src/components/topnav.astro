@@ -2,12 +2,14 @@
 // TOP NAV
 import { Image } from 'astro:assets';
 import LogoBixo from '../assets/images/logo_bixo.svg';
+
+const pathname = Astro.url.pathname;
 ---
 <nav>
     <div class="logo">
         <a href="/"><Image src={LogoBixo} alt="BichoTech, agencia interactiva" height="40" /></a>
     </div>
-    <div class="menu">
+    <div class="menu" data-currentPath={pathname}>
         <ul>
             <li>
                 <a href="/" id="home" class="menu-item">Inicio</a>
@@ -86,15 +88,12 @@ import LogoBixo from '../assets/images/logo_bixo.svg';
 
 <script>
     const menuItems = document.querySelectorAll('a.menu-item');
+    let pathname = document.querySelector('.menu')?.getAttribute('data-currentPath');
 
-    menuItems.forEach(el => {
-        let pathname = el.getAttribute('data-currentPath');
-
-        if ( pathname === '/' ){
-            document.querySelector('#home')?.classList.add('selected');
-        }
-        if ( pathname === '/bichotech/' ){
-            document.querySelector('#bichotech')?.classList.add('selected');
-        }
-    });
+    if ( pathname === '/' ){
+        document.querySelector('#home')?.classList.add('selected');
+    }
+    if ( pathname === '/bichotech/' ){
+        document.querySelector('#bichotech')?.classList.add('selected');
+    }
 </script>
