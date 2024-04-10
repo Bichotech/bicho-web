@@ -1,7 +1,6 @@
 ---
 // COMPONENT: SIMPLE SECTION
-const { title, content, button, link, subtitle, background } = Astro.props;
-const backgroundImage = "background-image: url('/assets/images/" + background + "');";
+const { title, subtitle, background } = Astro.props;
 ---
 
 <section id="__bx-general-section">
@@ -9,11 +8,10 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
         <div class="__bx-paragraph-centered">
             { subtitle !== '' && <h6>&mdash; {subtitle}</h6> }
             { title !== '' && <h3>{title}</h3> }
-            { content !== '' && <p>{content}</p> }
-            { button !== '' && <a href={link} class="base-btn">{button}</a> }
+            <slot name="SectionContent" />
         </div>
     </div>
-    <div class="__bixo-element back-orange back-image" style={ backgroundImage }>
+    <div class="__bixo-element back-orange back-image" style={{ backgroundImage: `url(${background})` }}>
         <div class="overlay"></div>
     </div>
 </section>
@@ -22,9 +20,23 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
     #__bx-general-section {
         align-items: stretch;
         flex-direction: row;
+        padding: unset;
 
         .__bx-paragraph-centered {
             color: var(--gray-bixo-color);
+
+            h3 {
+                line-height: 4.5rem;
+            }
+
+            p {
+                font-weight: 300;
+            }
+
+            a {
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
         }
 
         .__bixo-element {

@@ -1,13 +1,12 @@
 ---
 // TOP NAV
-import { Image } from 'astro:assets';
-import LogoBixo from '../assets/images/logo_bixo.svg';
+import LogoBixo from '../assets/images/logoBixo.astro';
 
 const pathname = Astro.url.pathname;
 ---
 <nav>
-    <div class="logo">
-        <a href="/"><Image src={LogoBixo} alt="BichoTech, agencia interactiva" height="40" /></a>
+    <div class="logo" style="width:150px;">
+        <a href="/"><LogoBixo /></a>
     </div>
     <div class="menu" data-currentPath={pathname}>
         <ul>
@@ -18,13 +17,16 @@ const pathname = Astro.url.pathname;
                 <a href="/bichotech/" id="bichotech" class="menu-item">Bichotech</a>
             </li>
             <li>
-                <a href="" id="" class="menu-item">Servicios</a>
+                <a href="/servicios/" id="servicios" class="menu-item">Servicios</a>
             </li>
             <li>
-                <a href="" id="" class="menu-item">Contacto</a>
+                <a href="/portafolio/" id="portafolio" class="menu-item">Portafolio</a>
             </li>
             <li>
-                <a href="" id="" class="menu-item">Blog</a>
+                <a href="/contacto/" id="contacto" class="menu-item">Contacto</a>
+            </li>
+            <li>
+                <a href="/blog/" id="blog" class="menu-item">Blog</a>
             </li>
         </ul>
     </div>
@@ -83,16 +85,31 @@ const pathname = Astro.url.pathname;
                 }
             }
         }
+
+        &.change-color {
+            .menu {
+                ul {
+                    li {
+                        a:not(a.selected) {
+                            color: var(--gray-bixo-color);
+                        }
+                    }
+                }
+            }
+        }
     }
 </style>
 
 <script>
-    let pathname = document.querySelector('.menu')?.getAttribute('data-currentPath');
+    (() => {
+        const menuItem = document.querySelector(`.menu`) as HTMLElement;
+        let pathname = menuItem.getAttribute('data-currentPath');
 
-    if ( pathname === '/' ){
-        document.querySelector('#home')?.classList.add('selected');
-    }
-    if ( pathname === '/bichotech/' ){
-        document.querySelector('#bichotech')?.classList.add('selected');
-    }
+        if ( pathname === '/' ){ (document.querySelector('#home') as HTMLElement).classList.add('selected'); }
+        if ( pathname === '/bichotech/' ){ (document.querySelector('#bichotech') as HTMLElement).classList.add('selected'); }
+        if ( pathname === '/servicios/' ){ (document.querySelector('#servicios') as HTMLElement).classList.add('selected'); }
+        if ( pathname === '/portafolio/' ){ (document.querySelector('#portafolio') as HTMLElement).classList.add('selected'); }
+        if ( pathname === '/contacto/' ){ (document.querySelector('#contacto') as HTMLElement).classList.add('selected'); }
+        if ( pathname === '/blog/' ){ (document.querySelector('#blog') as HTMLElement).classList.add('selected'); }
+    })();
 </script>

@@ -11,23 +11,29 @@ import SimpleSection from '../components/simple-section.astro';
 <Layout title="Bienvenido a BichoTech, agencia interactiva especialista en creación de estrategias para publicidad y presencia en medios electrónicos.">
 	
 	<MainSection
-			title="Nuestra responsabilidad es darle a su marca impacto digital y gráfico, nuestra misión es convertirnos en su equipo creativo."
-			background="index-img.jpg" />
+			title="Nuestra responsabilidad es brindarle a su marca un impacto digital y gráfico significativo. Nuestra misión es convertirnos en su equipo creativo de confianza."
+			background="index-img.jpg"
+			element={['branding', 'marketing', 'ui/ux design', 'web', 'apps', 'identidad visual']} />
 
 	<SimpleSection
 			title="Nos gusta despertar en nuestros clientes el amor a la creatividad funcional"
-			content="Somos ambiciosos y llevamos la creatividad al máximo"
-			button="&iquest;Quienes Somos?"
-			link="#"
 			subtitle=""
-			background="building-2.jpg" />
+			background="/assets/images/building-2.jpg">
+			<Fragment slot="SectionContent">
+				<p>Somos ambiciosos y llevamos la creatividad al máximo</p>
+				<a href="/servicios/" class="base-btn">Conoce nustros servicios</a>
+			</Fragment>
+	</SimpleSection>
 
 	<SimpleSection
 			title = "De la estrategia a la ejecución"
-			content = "Creamos procesos probados para ayudar a nuestros clientes a identificar las posibles áreas de oportunidad para crear experiencias visuales de sus marcas y productos."button="&iquest;Quienes Somos?"
-			button = ""
 			subtitle=""
-			background="buildings_city.jpg" />
+			background="/assets/images/buildings_city.jpg">
+		<Fragment slot="SectionContent">
+			<p>Creamos procesos probados para ayudar a nuestros clientes a identificar las posibles áreas de oportunidad para crear experiencias visuales de sus marcas y productos</p>
+			<a href="/procesos/" class="base-btn">Conoce nuestros procesos</a>
+		</Fragment>
+	</SimpleSection>
 
 	<BienvenidoSection />
 

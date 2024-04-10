@@ -17,9 +17,35 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<TopNav />
 		<slot />
+
+		<script>
+			(() => {
+				`use strict`;
+				const elMenu = document.querySelector('nav') as HTMLElement;
+				const elBody = document.querySelector(`body`) as HTMLElement;
+
+				if ( document.querySelector('.change-menu-color') !== null){
+					const elCambiante = document.querySelector('.change-menu-color') as HTMLElement;
+
+					elBody.addEventListener('scroll', () => {
+						const rect1 = elMenu.getBoundingClientRect();
+						const rect2 = elCambiante.getBoundingClientRect();
+						
+						if ( rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x && rect1.y < rect2.y + rect2.height && rect1.y + rect1.height > rect2.y ) {
+							elMenu.classList.add('change-color');
+						} else {
+							elMenu.classList.remove(`change-color`);
+						}
+					});
+				}
+			})();
+		</script>
 	</body>
 </html>

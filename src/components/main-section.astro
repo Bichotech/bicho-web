@@ -1,6 +1,11 @@
 ---
-// COMPONENT: MAIN SECTION
-const { title, background } = Astro.props;
+// COMPONENT: MAIN 
+interface PROPS {
+    title: string;
+    background: string;
+    element: Array<string>;
+}
+const { title, background, element} = Astro.props;
 const backgroundImage = "background-image: url('/assets/images/" + background + "');";
 ---
 
@@ -10,6 +15,19 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
     <div class="__bx-paragraph-centered">
         <h2>{title}</h2>
     </div>
+    {element &&
+    <div class="text-decorated">
+        {
+            element.map((value:string, index:number) => (
+                <div class:list={[`text-${index + 1}`, 'stroke-text']} style={{ marginLeft: index % 2 ? `${index * 1.618}%` : `-${index * 1.618}%` }}>
+                    <div class="main-text">{value}</div>
+                    <div class="pink-layer">{value}</div>
+                    <div class="teal-layer">{value}</div>
+                </div>
+            ))
+        }
+    </div>
+    }
 </section>
 
 <style lang="scss">
@@ -17,8 +35,66 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
         background-color: var(--black-color);
         background-attachment: fixed;
 
+        @media screen and (width < 1600px){
+            height: 100%;
+        }
+
         .__bx-paragraph-centered {
             color: #ffffff;
+            margin-left: 24rem;
+        }
+
+        .text-decorated {
+            position: absolute;
+            width: 50%;
+            right: 0;
+
+            @media screen and (width < 1600px){
+                top: 20%;
+            }
+
+            .stroke-text {
+                $stroke-width: 2px;
+                $stroke-opacity: 0.5;
+                font-size: 90px;
+                font-weight: 600;
+                text-transform: lowercase;
+                -webkit-text-stroke-color: white;
+                -webkit-text-stroke-width: $stroke-width;
+                line-height: 1.2;
+                position: relative;
+
+                @media screen and (width < 1600px){
+                    font-size: 40px;
+                }
+
+                .main-text {
+                    font-size: inherit;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .pink-layer {
+                    font-size: inherit;
+                    -webkit-text-stroke-color: var(--pink-bixo-color);
+                    -webkit-text-stroke-width: $stroke-width;
+                    position: absolute;
+                    top: 15%;
+                    left: -2%;
+                    opacity: $stroke-opacity;
+                    
+                }
+
+                .teal-layer {
+                    font-size: inherit;
+                    -webkit-text-stroke-color: var(--teal-bixo-color);
+                    -webkit-text-stroke-width: $stroke-width;
+                    position: absolute;
+                    top: -15%;
+                    left: 2%;
+                    opacity: $stroke-opacity;
+                }
+            }
         }
     }
 </style>

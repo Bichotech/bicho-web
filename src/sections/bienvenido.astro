@@ -1,7 +1,6 @@
 ---
 // BIENVENIDO SECTION
-import { Image } from 'astro:assets';
-import MalenkyLogo from '../assets/images/malenky-logo.svg';
+import MalenkyLogo from '../assets/images/malenkyLogo.astro';
 ---
 
 <section id="__bx-bienvenido-section">
@@ -10,10 +9,12 @@ import MalenkyLogo from '../assets/images/malenky-logo.svg';
             <h6>&mdash; Septiembre 05, 2023</h6>
             <h3>¡Bienvenido a la familia, Malenky!</h3>
             <p>Malenky es un emprendimiento que se dedica a la creacion de amigurumis y otros productos usando el crochet. Se realizará una estrategia para medios electrónicos, asi como la creación de historias para algunos personajes.</p>
+            <a href="/clientes/" class="base-btn">Conoce a nuestros clientes</a>
         </div>
     </div>
     <div class="__bixo-element centered-image back-orange">
-        <Image src={ MalenkyLogo } alt="Logo de Malenky" />
+        <div class="overlay"></div>
+        <MalenkyLogo />
     </div>
 </section>
 
@@ -21,6 +22,7 @@ import MalenkyLogo from '../assets/images/malenky-logo.svg';
     #__bx-bienvenido-section {
         align-items: stretch;
         flex-direction: row;
+        padding: unset;
 
         .__bx-paragraph-centered {
             color: var(--gray-bixo-color);
