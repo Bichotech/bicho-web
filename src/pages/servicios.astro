@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainSection from '../components/main-section.astro';
-// import SimpleSection from '../components/simple-section.astro';
+import SimpleSection from '../components/simple-section.astro';
 ---
 
 <Layout title="Qu&eacute; es y quienes somos en BichoTech">
@@ -9,6 +9,120 @@ import MainSection from '../components/main-section.astro';
 	<MainSection
 			title="En BICHOTECH nos gusta usar la imaginación y la convertimos en creatividad."
 			background="bichotech.jpg"
-			element={['consultoria', 'asesoría', 'desarrollo', 'diseño', 'auditoría gráfica']} />
+			element={['consultoria', 'desarrollo', 'diseño', 'auditoría gráfica']} />
+	
+	<SimpleSection
+			title="Auditoría gráfica"
+			subtitle=""
+			background="/assets/images/building-2.jpg">
+			<Fragment slot="SectionContent">
+				<p>Evaluamos la eficacia visual de tu marca o proyecto. Analizamos si los elementos gráficos (logo, tipografía, colores, imágenes) son coherentes entre sí y transmiten el mensaje deseado al público objetivo.</p>
+				<p><strong>Beneficios:</strong></p>
+				<ul>
+					<li>Mejora la imagen de marca.</li>
+					<li>Aumenta la eficacia de la comunicación visual.</li>
+					<li>Permite optimizar el uso de recursos.</li>
+				</ul>
+				<a href="#" class="base-btn">Solicita información</a>
+			</Fragment>
+	</SimpleSection>
+	<SimpleSection
+			title="Consultoría gráfica"
+			subtitle=""
+			background="/assets/images/building-2.jpg">
+			<Fragment slot="SectionContent">
+				<p>Ofrecemos asesoramiento y soluciones en diseño gráfico para tu negocio o empresa. Nos encargamos de crear estrategias visuales que ayuden a alcanzar los objetivos de comunicación como marca.</p>
+				<p><strong>Ejemplo de este servicio:</strong></p>
+				<ul>
+					<li>Diseño de logotipos e identidad de marca.</li>
+					<li>Diseño de materiales publicitarios.</li>
+					<li>Diseño web.</li>
+				</ul>
+				<a href="#" class="base-btn">Solicita información</a>
+			</Fragment>
+	</SimpleSection>
+	<SimpleSection
+			title="Consultoría Web"
+			subtitle=""
+			background="/assets/images/building-2.jpg">
+			<Fragment slot="SectionContent">
+				<p>Te ofrecemeos asesoramiento y soluciones en la creación, gestión y optimización de sitios y aplicaciones web. Nos encarga de analizar tus necesidades y te proponemos las soluciones más adecuadas.</p>
+				<p><strong>Ejemplo de este servicio:</strong></p>
+				<ul>
+					<li>Diseño y desarrollo web.</li>
+					<li>Marketing digital.</li>
+					<li>SEO (Search Engine Optimization).</li>
+					<li>SEM (Search Engine Marketing).</li>
+					<li>Analítica web</li>
+				</ul>
+				<a href="#" class="base-btn">Solicita información</a>
+			</Fragment>
+	</SimpleSection>
+	<SimpleSection
+			title="Diseño de identidad visual"
+			subtitle=""
+			background="/assets/images/building-2.jpg">
+			<Fragment slot="SectionContent">
+				<p>El diseño de identidad visual es el proceso de crear una representación gráfica de una marca o proyecto. Esta representación incluye elementos como el logotipo, la tipografía, la paleta de colores y las imágenes. El objetivo es crear una imagen coherente y memorable que transmita la esencia de la marca al público objetivo.</p>
+				<p><strong>Beneficios:</strong></p>
+				<ul>
+					<li>Mejora la imagen de marca.</li>
+					<li>Aumenta el reconocimiento de marca.</li>
+					<li>Facilita la comunicación con el público objetivo.</li>
+				</ul>
+				<p><strong>Elementos:</strong></p>
+				<ul>
+					<li><strong>Logotipo</strong>: Es la representación gráfica más importante de la marca.</li>
+					<li><strong>Tipografía</strong>: La tipografía elegida debe ser coherente con el estilo de la marca.</li>
+					<li><strong>Paleta de colores</strong>: Los colores deben ser seleccionados cuidadosamente para transmitir el mensaje deseado.</li>
+					<li><strong>Imágenes</strong>: Las imágenes deben ser de alta calidad y coherentes con el estilo de la marca.</li>
+				</ul>
+				<a href="#" class="base-btn">Solicita información</a>
+			</Fragment>
+	</SimpleSection>
+	<SimpleSection
+			title="Diseño de interfaces de usuario"
+			subtitle=""
+			background="/assets/images/building-2.jpg">
+			<Fragment slot="SectionContent">
+				<p>El diseño de interfaces de usuario (UI) es el proceso de crear interfaces que sean fáciles de usar y agradables visualmente. Esto implica el diseño de elementos como la estructura de la información, la navegación, los formularios, los botones y los iconos. El objetivo es crear una interfaz que sea intuitiva y eficiente, y que ayude al usuario realizar las tareas que desea de forma rápida y sencilla.</p>
+				<p><strong>Beneficios:</strong></p>
+				<ul>
+					<li>Mejora la experiencia del usuario.</li>
+					<li>Aumenta la satisfacción al navegar por el sitio o aplicación.</li>
+					<li>Mejora la usabilidad del producto.</li>
+					<li>Mejora la percepción del negocio, proyecto o producto.</li>
+				</ul>
+				<p><strong>Elementos:</strong></p>
+				<ul>
+					<li><strong>Estructura de la información</strong>: La información debe estar organizada de forma lógica y fácil de entender.</li>
+					<li><strong>Navegación</strong>: La navegación debe ser sencilla e intuitiva.</li>
+					<li><strong>Formularios</strong>: Los formularios deben ser fáciles de completar y no deben pedir información innecesaria.</li>
+					<li><strong>Botones e iconos</strong>: Los botones e iconos deben ser claros y fáciles de identificar.</li>
+					<li><strong>Tipografía</strong>: La tipografía debe ser legible y coherente con el estilo de la interfaz.</li>
+					<li><strong>Colores</strong>: Los colores deben ser seleccionados cuidadosamente para no fatigar la vista del usuario.</li>
+				</ul>
+				<a href="#" class="base-btn">Solicita información</a>
+			</Fragment>
+	</SimpleSection>
+	<SimpleSection
+			title="Desarrollo de aplicaciones web"
+			subtitle=""
+			background="/assets/images/building-2.jpg">
+			<Fragment slot="SectionContent">
+				<p>El desarrollo de aplicaciones web es el proceso de crear software que se ejecuta en un navegador web. Este software puede ser utilizado para realizar una gran variedad de tareas y no requiere instalación en el dispositivo del usuario.</p>
+				<p><strong>Tipos de aplicaciones web:</strong></p>
+				<ul>
+					<li><strong>Estáticas</strong>: No cambian de contenido a menos que el usuario las actualice.</li>
+					<li><strong>Dinámicas</strong>: Se generan en tiempo real en función de las acciones del usuario.</li>
+					<li><strong>Progresivas</strong>: Son aplicaciones web que se pueden instalar en el dispositivo del usuario y que funcionan como una aplicación nativa.</li>
+				</ul>
+				<a href="#" class="base-btn">Solicita información</a>
+			</Fragment>
+	</SimpleSection>
+<!--
+
+-->
+
 
 </Layout>

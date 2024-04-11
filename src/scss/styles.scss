@@ -129,6 +129,22 @@ section {
         max-width: 60rem;
         position: relative;
         z-index: 2;
+
+        ul {
+            margin: 0 0 2rem 2rem;
+
+            li {
+                font-size: 1.6rem;
+
+                strong {
+                    font-size: inherit;
+                }
+
+                a {
+                    font-size: inherit;
+                }
+            }
+        }
     }
 
     .__bixo-element {

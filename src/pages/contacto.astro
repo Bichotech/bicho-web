@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainSection from '../components/main-section.astro';
-// import SimpleSection from '../components/simple-section.astro';
+import SimpleSection from '../components/simple-section.astro';
 ---
 
 <Layout title="Qu&eacute; es y quienes somos en BichoTech">
@@ -10,4 +10,39 @@ import MainSection from '../components/main-section.astro';
 			title="Contacto"
 			background="bichotech.jpg" />
 
+	<SimpleSection
+			title="¿Quieres saber más sobre cómo podemos ayudarte?"
+			subtitle="¡No dudes en contactarnos!"
+			background="/assets/images/building-2.jpg">
+			<Fragment slot="SectionContent">
+				<p>Estamos aquí para ayudarte a alcanzar tus objetivos de negocio.</p>
+				<p>Puedes contactarnos a través de:</p>
+				<ul>
+					<li>Teléfono: +52 81 1072 5717</li>
+					<li>Correo electrónico: <a href="mailto:contacto@bicho.tech">contacto@bicho.tech</a></li>
+				</ul>
+				<p>También puedes seguirnos en nuestras redes sociales:</p>
+				<ul>
+					<li>Red 1: </li>
+					<li>Red 2: </li>
+				</ul>
+				<p>¡Esperamos tener noticias tuyas!</p>
+				<div class="signature">
+					<img src="/assets/images/signature.webp" width="200" alt="">
+				</div>
+			</Fragment>
+	</SimpleSection>
 </Layout>
+
+<!-- 
+	También puedes seguirnos en nuestras redes sociales:
+
+    [Nombre de la red social 1]: [Enlace a la red social 1]
+    [Nombre de la red social 2]: [Enlace a la red social 2]
+
+¡Esperamos tener noticias tuyas!
+
+[Nombre de la empresa]
+
+[Eslogan de la empresa]
+ -->
