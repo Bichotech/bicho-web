@@ -124,7 +124,7 @@ const pathname = Astro.url.pathname;
                 justify-content: space-between;
                 gap: 3rem;
 
-                @media screen and (width < 1600px){
+                @media screen and (width < 1000px){
                     flex-direction: column;
                     gap: 1rem;
                 }
@@ -170,8 +170,6 @@ const pathname = Astro.url.pathname;
         }
 
         &#desktop-nav {
-            // display: block;
-
             @media screen and (width < 1000px){
                 display: none;
             }
@@ -187,21 +185,28 @@ const pathname = Astro.url.pathname;
 
             .burger {
                 display: flex;
-                width: 50px;
-                height: 35px;
-                border: 1px solid var(--orange-bixo-color);
+                width: 40px;
+                height: 24px;
                 flex-direction: column;
-                padding: 5px 0;
+                padding: 0;
                 justify-content: space-around;
-                align-items: center;
+                align-items:flex-end;
                 border-radius: 4px;
                 cursor: pointer;
 
                 .line {
                     display: block;
-                    width: 30px;
+                    width: 40px;
                     height: 1px;
                     background-color: var(--orange-bixo-color);
+
+                    &:nth-of-type(2) {
+                        width: 30px;
+                    }
+
+                    &:nth-of-type(3) {
+                        width: 20px;
+                    }
                 }
             }
 
@@ -216,6 +221,10 @@ const pathname = Astro.url.pathname;
 
             .logo-top {
                 width: 150px;
+
+                @media screen and (width < 1000px){
+                    width: 120px;
+                }
             }
         }
 
@@ -243,6 +252,10 @@ const pathname = Astro.url.pathname;
                         width: 80px;
                         height: 90px;
                         text-align: center;
+
+                        @media screen and (width < 1000px){
+                            height: 60px;
+                        }
                     }
 
                     &:hover {
