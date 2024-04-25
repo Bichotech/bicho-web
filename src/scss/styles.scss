@@ -50,7 +50,7 @@ h4, h5, h6 {
 h1 {
     font-size: 5rem;
 
-    @media screen and (width < 1000px){
+    @media screen and (width < 1600px){
         font-size: 4rem;
     }
 }
@@ -58,7 +58,7 @@ h1 {
 h2 {
     font-size: 4.2rem;
 
-    @media screen and (width < 1000px){
+    @media screen and (width < 1600px){
         font-size: 3rem;
     }
 }
@@ -66,7 +66,7 @@ h2 {
 h3 {
     font-size: 3.6rem;
 
-    @media screen and (width < 1000px){
+    @media screen and (width < 1600px){
         font-size: 2.6rem;
     }
 }
@@ -74,7 +74,7 @@ h3 {
 h4 {
     font-size: 2.6rem;
 
-    @media screen and (width < 1000px){
+    @media screen and (width < 1600px){
         font-size: 2rem;
     }
 }
@@ -82,7 +82,7 @@ h4 {
 h5 {
     font-size: 2rem;
 
-    @media screen and (width < 1000px){
+    @media screen and (width < 1600px){
         font-size: 1.6rem;
     }
 }
@@ -90,7 +90,7 @@ h5 {
 h6 {
     font-size: 1.4rem;
 
-    @media screen and (width < 1000px){
+    @media screen and (width < 1600px){
         font-size: 1.2rem;
     }
 }
@@ -99,7 +99,7 @@ p {
     margin: 2rem 0 2rem 0;
     font-size: 2rem;
 
-    @media screen and (width < 1000px){
+    @media screen and (width < 1600px){
         font-size: 1.4rem;
     }
 
@@ -127,7 +127,7 @@ a {
             color: white;
         }
 
-        @media screen and (width < 1000px){
+        @media screen and (width < 1600px){
             font-size: 1.2rem;
         }
     }
@@ -155,9 +155,6 @@ section {
 
     @media screen and (width < 1600px){
         height: auto;
-    }
-
-    @media screen and (width < 1000px){
         scroll-snap-align: unset;
         padding: 0;
     }
@@ -200,7 +197,7 @@ section {
         flex-grow: 1;
         justify-content: center;
 
-        @media screen and (width < 1200px){
+        @media screen and (width < 1600px){
             width: 100%;
             height: auto;
             min-height: 400px;
