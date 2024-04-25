@@ -35,8 +35,13 @@ body {
     height: 100svh;
     overflow-x: hidden;
     overflow-y: auto;
-    scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y proximity;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 h1, h2, h3 {
