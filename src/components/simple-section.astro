@@ -22,11 +22,23 @@ const { title, subtitle, background } = Astro.props;
         flex-direction: row;
         padding: unset;
 
+        @media screen and (width < 1000px){
+            flex-direction: column-reverse;
+        }
+
         .__bx-paragraph-centered {
             color: var(--gray-bixo-color);
 
+            @media screen and (width < 1000px){
+                padding: 30px 0;
+            }
+
             h3 {
                 line-height: 4.5rem;
+
+                @media screen and (width < 1000px){
+                    line-height: 1.2;
+                }
             }
 
             p {

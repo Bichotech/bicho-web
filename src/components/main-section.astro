@@ -42,6 +42,10 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
         .__bx-paragraph-centered {
             color: #ffffff;
             margin-left: 24rem;
+
+            @media screen and (width < 1600px){
+                margin-left: 2rem;
+            }
         }
 
         .text-decorated {
@@ -51,6 +55,10 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
 
             @media screen and (width < 1600px){
                 top: 20%;
+            }
+
+            @media screen and (width < 1000px){
+                width: 80%;
             }
 
             .stroke-text {
@@ -66,6 +74,10 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
 
                 @media screen and (width < 1600px){
                     font-size: 40px;
+                }
+
+                @media screen and (width < 1000px){
+                    display: none;
                 }
 
                 .main-text {

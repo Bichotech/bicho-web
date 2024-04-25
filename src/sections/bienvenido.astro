@@ -24,6 +24,10 @@ import MalenkyLogo from '../assets/images/malenkyLogo.astro';
         flex-direction: row;
         padding: unset;
 
+        @media screen and (width < 1600px){
+            flex-direction: column-reverse;
+        }
+
         .__bx-paragraph-centered {
             color: var(--gray-bixo-color);
 

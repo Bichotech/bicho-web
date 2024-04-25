@@ -4,7 +4,7 @@ import LogoBixo from '../assets/images/logoBixo.astro';
 
 const pathname = Astro.url.pathname;
 ---
-<nav>
+<nav id="desktop-nav">
     <div class="logo" style="width:150px;">
         <a href="/"><LogoBixo /></a>
     </div>
@@ -32,6 +32,67 @@ const pathname = Astro.url.pathname;
     </div>
 </nav>
 
+<nav id="mobile-nav">
+    <ul>
+        <li>
+            <a href="/">
+                <div class="logo-top">
+                    <LogoBixo />
+                </div>
+            </a>
+        </li>
+        <li>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<div class="side-menu">
+    <a href="javascript: void(0);" class="close-menu">&times;</a>
+    <div class="logo-top">
+        <LogoBixo />
+    </div>
+    <ul>
+        <li>
+            <a href="/" id="home" class="menu-item">Inicio</a>
+        </li>
+        <li>
+            <a href="/bichotech/" id="bichotech" class="menu-item">Bichotech</a>
+        </li>
+        <li>
+            <a href="/servicios/" id="servicios" class="menu-item">Servicios</a>
+        </li>
+        <li>
+            <a href="/portafolio/" id="portafolio" class="menu-item">Portafolio</a>
+        </li>
+        <li>
+            <a href="/contacto/" id="contacto" class="menu-item">Contacto</a>
+        </li>
+        <li>
+            <a href="/blog/" id="blog" class="menu-item">Blog</a>
+        </li>
+    </ul>
+</div>
+<script>
+    (() => {
+        const burgerMenu:any = document.querySelector('.burger');
+        const closeMenu:any = document.querySelector('.close-menu');
+        const sideMenu:any = document.querySelector('.side-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            sideMenu.classList.add('open');
+            sideMenu.classList.remove('close');
+        });
+        closeMenu.addEventListener('click', () => {
+            sideMenu.classList.add('close');
+            sideMenu.classList.remove('open');
+        });
+    })();
+</script>
 <style lang="scss">
     nav {
         display: flex;
@@ -43,7 +104,12 @@ const pathname = Astro.url.pathname;
         width: 100svw;
         box-sizing: border-box;
         padding: 1rem 2rem;
-        z-index: 2;
+        z-index: 9;
+
+        @media screen and (width < 1000px){
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+        }
 
         .logo {
 
@@ -57,6 +123,11 @@ const pathname = Astro.url.pathname;
                 display: flex;
                 justify-content: space-between;
                 gap: 3rem;
+
+                @media screen and (width < 1600px){
+                    flex-direction: column;
+                    gap: 1rem;
+                }
 
                 li {
                     a {
@@ -96,6 +167,177 @@ const pathname = Astro.url.pathname;
                     }
                 }
             }
+        }
+
+        &#desktop-nav {
+            // display: block;
+
+            @media screen and (width < 1000px){
+                display: none;
+            }
+        }
+
+        &#mobile-nav {
+            display: none;
+            padding: 10px 20px;
+            
+            @media screen and (width < 1000px){
+                display: block;
+            }
+
+            .burger {
+                display: flex;
+                width: 50px;
+                height: 35px;
+                border: 1px solid var(--orange-bixo-color);
+                flex-direction: column;
+                padding: 5px 0;
+                justify-content: space-around;
+                align-items: center;
+                border-radius: 4px;
+                cursor: pointer;
+
+                .line {
+                    display: block;
+                    width: 30px;
+                    height: 1px;
+                    background-color: var(--orange-bixo-color);
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 60px;
+            }
+
+            .logo-top {
+                width: 150px;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 90px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: var(--linkColor);
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+
+                    .logo-top {
+                        display: block;
+                        width: 80px;
+                        height: 90px;
+                        text-align: center;
+                    }
+
+                    &:hover {
+                        color: #F62F42;
+                    }
+                }
+            }
+        }
+    }
+
+    .side-menu {
+        position: fixed;
+        width: 320px;
+        height: 100%;
+        display: block;
+        background-color: var(--black-color);
+        top: 0;
+        right: -360px;
+        z-index: 100;
+        box-shadow: -5px 0 30px 6px rgba(0,0,0,0.5);
+        padding: 30px 0;
+
+        @media screen and (width > 800px){
+            display: none;
+        }
+
+        &.open {
+            animation: slideShowMenu 500ms forwards;
+        }
+
+        &.close {
+            animation: slideHideMenu 500ms forwards;
+        }
+
+        .close-menu {
+            text-decoration: none;
+            font-size: 40px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: var(--orange-bixo-color);
+        }
+
+        .logo-top {
+            width: 200px;
+            margin: 40px auto 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+
+            li {
+                width: 100%;
+
+                .logo-top {
+                    margin: 0 auto 20px;
+                    width: 60%;
+                }
+
+                a {
+                    color: red;
+                    font-size: 14px;
+                    display: block;
+                    width: 100%;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                    &:first-child {
+                        border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes slideShowMenu {
+        0% {
+            right: -360px;
+        }
+        100% {
+            right: 0;
+        }
+    }
+
+    @keyframes slideHideMenu {
+        0% {
+            right: 0;
+        }
+        100% {
+            right: -360px;
         }
     }
 </style>
