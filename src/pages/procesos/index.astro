@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MainSection from '../../components/main-section.astro';
+import WhiteSection from '../../components/white-section.astro';
+---
+
+<Layout title="Procesos de trabajo de BichoTech" desc="Conoce nuestros procesos para cada tipo de proyectos que tenemos en BichoTech">
+	
+	<MainSection
+			title="Nuestros procesos"
+			background="bichotech.jpg"
+			element={['¿cómo?', '¿porqué?', '¿cuando?']} />
+	
+    <WhiteSection>
+        <Fragment slot="SectionContent">
+            <h3>Estamos diseñando los documentos para mostrartelo en nuestro sitio.</h3>
+        </Fragment>
+    </WhiteSection>
+</Layout>

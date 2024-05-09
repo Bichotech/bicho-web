@@ -1,0 +1,110 @@
+<form action="" method="post">
+    <div class="form-element">
+        <input type="text" name="txtName" id="txtName" placeholder="Nombre" />
+        <div class="asteriks">*</div>
+    </div>
+    <div class="form-element">
+        <input type="email" name="txtEmail" id="txtEmail" placeholder="E-mail" />
+        <div class="asteriks">*</div>
+    </div>
+    <div class="form-element">
+        <input type="text" name="txtCompany" id="txtCompany" placeholder="Compañía" />
+    </div>
+    <div class="form-element">
+        <textarea name="txtMessage" id="txtMessage" rows="10" placeholder="Mensaje"></textarea>
+    </div>
+    <div class="form-element">
+        <div id="warnings"></div>
+    </div>
+    <div class="form-element">
+        <button id="btn-send">Enviar Mensaje</button>
+    </div>
+</form>
+<script>
+    (() => {
+        `use strict`
+        const txtName:any = document.querySelector(`#txtName`);
+        const txtEmail:any = document.querySelector(`#txtEmail`);
+        const txtCompany:any = document.querySelector(`#txtCompany`);
+        const txtMessage:any = document.querySelector(`#txtMessage`);
+        const btnSend:any = document.querySelector(`#btn-send`);
+        const WarnArea:any = document.querySelector(`#warnings`);
+
+        const isValid = (emailAddress:string) => {
+            return emailAddress.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+        };
+
+        btnSend.addEventListener(`click`, (event:any) => {
+            event.preventDefault();
+            let warnings:string = '<ul>';
+            let flag:boolean = true;
+
+            if ( txtName.value === '' || txtName.value === undefined ){
+                warnings += '<li>Su nombre es requerido para enviar la forma</li>';
+                flag = false;
+            }
+
+            if ( !isValid(txtEmail.value) ){
+                warnings += '<li>Su e-mail es requerido para enviar la forma</li>';
+                flag = false;
+            }
+
+            if ( flag ) {
+                WarnArea.innerHTML = '';
+            } else {
+                warnings += '</ul>';
+                WarnArea.innerHTML = warnings;
+            }
+        });
+    })();
+</script>
+<style lang="scss">
+   form {
+        width: 98%;
+
+        .form-element {
+            margin: 10px 0;
+            width: 100%;
+            position: relative;
+
+            .asteriks {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                display: block;
+                color: var(--orange-bixo-color);
+                top: 0;
+                right: 0;
+                font-size: 2.5rem;
+            }
+
+            input, textarea {
+                width: 100%;
+                font-family: var(--bx-ff-poppins);
+                border: 1px solid var(--gray-bixo-color);
+                font-size: 1.2rem;
+                padding: 4px 6px;
+                border-radius: 6px;
+            }
+
+            button {
+                background-color: var(--orange-bixo-color);
+                border: 0;
+                padding: 10px 6px;
+                color: white;
+                width: 100%;
+                font-size: 1.4rem;
+                border-radius: 6px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--black-color);
+                }
+            }
+
+            #warnings {
+                color: var(--warning-bixo-color);
+            }
+        }
+    }
+</style>

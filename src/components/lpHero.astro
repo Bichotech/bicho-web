@@ -1,0 +1,33 @@
+---
+interface PROPS {
+    title: string;
+    background: string;
+    titleColor?: string;
+}
+
+const { title, background, titleColor="#000" } = Astro.props as PROPS;
+---
+
+<header style={{ backgroundImage: `url(${background})` }}>
+    <h2>{ title }</h2>
+</header>
+
+<style lang="scss" define:vars={{ titleColor }}>
+    header {
+        position: relative;
+        min-height: 650px;
+        background-color: var(--navy-bixo-color);
+        padding: 80px 120px;
+
+        @media screen and (width < 600px) {
+            padding: 80px 30px;
+        }
+
+        h2 {
+            position: absolute;
+            color: var(--titleColor);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+</style>

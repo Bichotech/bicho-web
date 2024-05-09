@@ -1,0 +1,42 @@
+---
+import WhiteSection from "../components/white-section.astro";
+---
+<WhiteSection>
+    <Fragment slot="SectionContent">
+        <div class="customer-logos">
+            <div class="logo"><img src="/assets/images/customers/logo-de-la-clinica-dental-carranza.webp" alt="Dental Carranza del Dr. Ramiro Carranza"></div>
+            <div class="logo"><img src="/assets/images/customers/logo-para-el-artista-plastico-heber-banda.webp" alt="Heber Banda, artísta plástico"></div>
+            <div class="logo"><img src="/assets/images/customers/logo-de-la-empresa-mooving-logistics.webp" alt="Mooving Logistics, servicios de logística en Monterrey, NL"></div>
+            <div class="logo"><img src="/assets/images/customers/logo-del-negocio-malenky.webp" alt="Malenky es nuestro primer cliente creando personajes en crochet"></div>
+        </div>
+    </Fragment>
+</WhiteSection>
+
+<style lang="scss">
+    .customer-logos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+
+        @media screen and (width < 1000px){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (width < 530px){
+            grid-template-columns: 1fr;
+        }
+
+        .logo {
+            display: block;
+            width: 250px;
+            max-width: 100%;
+            height: 250px;
+            justify-self: center;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+</style>

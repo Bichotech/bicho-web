@@ -6,6 +6,7 @@
     --pink-bixo-color: rgb(255, 0, 255);
     --white-bixo-color: rgb(254, 255, 239);
     --navy-bixo-color: rgb(10, 35, 66);
+    --warning-bixo-color: rgb(216, 70, 70);
 
     --bx-ff-poppins: 'Poppins', Arial, Helvetica, sans-serif;
 }
@@ -16,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
 }
 
 html {
@@ -102,7 +104,7 @@ h6 {
 
 p {
     margin: 2rem 0 2rem 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
 
     @media screen and (width < 1600px){
         font-size: 1.4rem;
@@ -217,7 +219,7 @@ section {
         }
 
         div {
-            max-width: 80%;
+            max-width: 100%;
         }
     }
 

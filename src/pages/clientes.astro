@@ -1,13 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainSection from '../components/main-section.astro';
+import Customers from '../sections/customers.astro';
 // import SimpleSection from '../components/simple-section.astro';
 ---
 
-<Layout title="Qu&eacute; es y quienes somos en BichoTech">
+<Layout title="Gracias por confiar en BichoTech" desc="Gracias a nuestros clientes, BichoTech crece a pasos agigantados.">
 	
 	<MainSection
-			title="Portafolio"
-			background="bichotech.jpg" />
+			title="Clientes"
+			background="bichotech.jpg"
+			element={[ "gracias", "por tu", "confianza"]} />
 
+	<Customers />
 </Layout>

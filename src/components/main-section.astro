@@ -5,7 +5,7 @@ interface PROPS {
     background: string;
     element: Array<string>;
 }
-const { title, background, element} = Astro.props;
+const { title, background, element} = Astro.props as PROPS;
 const backgroundImage = "background-image: url('/assets/images/" + background + "');";
 ---
 
@@ -31,12 +31,26 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
 </section>
 
 <style lang="scss">
+    @mixin no-select {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
     #__bx-main-section {
         background-color: var(--black-color);
         background-attachment: fixed;
 
         @media screen and (width < 1600px){
             height: 100%;
+        }
+
+        @media screen and (width < 600px){
+            height: 80%;
+            background-attachment: unset;
+            background-position: center center;
         }
 
         .__bx-paragraph-centered {
@@ -79,6 +93,7 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
                     font-size: inherit;
                     position: relative;
                     z-index: 2;
+                    @include no-select;
                 }
 
                 .pink-layer {
@@ -89,7 +104,7 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
                     top: 15%;
                     left: -2%;
                     opacity: $stroke-opacity;
-                    
+                    @include no-select;
                 }
 
                 .teal-layer {
@@ -100,6 +115,7 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
                     top: -15%;
                     left: 2%;
                     opacity: $stroke-opacity;
+                    @include no-select;
                 }
             }
         }

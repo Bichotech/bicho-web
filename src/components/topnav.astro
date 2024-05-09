@@ -1,12 +1,13 @@
 ---
 // TOP NAV
+import IconBixo from '../assets/images/iconBixo.astro';
 import LogoBixo from '../assets/images/logoBixo.astro';
 
 const pathname = Astro.url.pathname;
 ---
 <nav id="desktop-nav">
-    <div class="logo" style="width:150px;">
-        <a href="/"><LogoBixo /></a>
+    <div class="logo">
+        <a href="/"><IconBixo /></a>
     </div>
     <div class="menu" data-currentPath={pathname}>
         <ul>
@@ -36,8 +37,8 @@ const pathname = Astro.url.pathname;
     <ul>
         <li>
             <a href="/">
-                <div class="logo-top">
-                    <LogoBixo />
+                <div class="logo-top-bar">
+                    <IconBixo />
                 </div>
             </a>
         </li>
@@ -112,7 +113,7 @@ const pathname = Astro.url.pathname;
         }
 
         .logo {
-
+            width: 40px;
         }
 
         .menu {
@@ -151,6 +152,7 @@ const pathname = Astro.url.pathname;
 
                         &:hover {
                             background-color: #b72100;
+                            color: white;
                         }
                     }
                 }
@@ -163,6 +165,10 @@ const pathname = Astro.url.pathname;
                     li {
                         a:not(a.selected) {
                             color: var(--gray-bixo-color);
+
+                            &:hover {
+                                color: white;
+                            }
                         }
                     }
                 }
@@ -219,11 +225,11 @@ const pathname = Astro.url.pathname;
                 gap: 60px;
             }
 
-            .logo-top {
+            .logo-top-bar {
                 width: 150px;
 
                 @media screen and (width < 1600px){
-                    width: 120px;
+                    width: 40px;
                 }
             }
         }
@@ -247,7 +253,7 @@ const pathname = Astro.url.pathname;
                     font-weight: 600;
                     letter-spacing: 1px;
 
-                    .logo-top {
+                    .logo-top-bar {
                         display: block;
                         width: 80px;
                         height: 90px;

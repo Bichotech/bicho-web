@@ -8,20 +8,21 @@ import MainSection from '../components/main-section.astro';
 import SimpleSection from '../components/simple-section.astro';
 ---
 
-<Layout title="Bienvenido a BichoTech, agencia interactiva especialista en creación de estrategias para publicidad y presencia en medios electrónicos.">
+<Layout title="BichoTech, agencia interactiva" desc='Bienvenido a BichoTech, agencia interactiva especialista en creación de estrategias para publicidad y presencia en medios electrónicos.'>
 	
 	<MainSection
-			title="Nuestra responsabilidad es brindarle a su marca un impacto digital y gráfico significativo. Nuestra misión es convertirnos en su equipo creativo de confianza."
+			title="Nuestra responsabilidad es brindar a tu marca un impacto gráfico. Nuestra misión es convertirnos en tu equipo creativo de confianza."
 			background="index-img.jpg"
-			element={['branding', 'marketing', 'ui/ux design', 'web', 'apps', 'identidad visual']} />
+			element={['branding', 'marketing', 'ui/ux', 'desarrollo']} />
 
 	<SimpleSection
-			title="Nos gusta despertar en nuestros clientes el amor a la creatividad funcional"
+			title="Amamos la creatividad"
 			subtitle=""
 			background="/assets/images/building-2.jpg">
 			<Fragment slot="SectionContent">
-				<p>Somos ambiciosos y llevamos la creatividad al máximo</p>
-				<a href="/servicios/" class="base-btn">Conoce nustros servicios</a>
+				<p>Nos gusta despertar en personas como tu, el amor por la creatividad en función de metas específicas.</p>
+				<p>Somos ambiciosos y llevamos la creatividad al máximo.</p>
+				<a href="/servicios/" class="base-btn">Conoce nuestros servicios</a>
 			</Fragment>
 	</SimpleSection>
 
@@ -29,10 +30,10 @@ import SimpleSection from '../components/simple-section.astro';
 			title = "De la estrategia a la ejecución"
 			subtitle=""
 			background="/assets/images/lady-soldier-bixo-army-cyberpunk.webp">
-		<Fragment slot="SectionContent">
-			<p>Creamos procesos probados para ayudar a nuestros clientes a identificar las posibles áreas de oportunidad para crear experiencias visuales de sus marcas y productos</p>
-			<a href="/procesos/" class="base-btn">Conoce nuestros procesos</a>
-		</Fragment>
+			<Fragment slot="SectionContent">
+				<p>Creamos procesos ampliamentes probados para ayudarte a identificar las posibles áreas de oportunidad y crear experiencias visuales de tus marcas y productos.</p>
+				<a href="/procesos/" class="base-btn">Conoce nuestros procesos</a>
+			</Fragment>
 	</SimpleSection>
 
 	<BienvenidoSection />

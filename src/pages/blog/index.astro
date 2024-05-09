@@ -1,20 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import MainSection from '../../components/main-section.astro';
-// import SimpleSection from '../components/simple-section.astro';
+import WhiteSection from '../../components/white-section.astro';
 ---
 
-<Layout title="Qu&eacute; es y quienes somos en BichoTech">
+<Layout title="La voz de BichoTech" desc='Artículos, noticias y otros temas varios que BichoTech desea compartir contigo.'>
 	
 	<MainSection
 			title="Blog"
 			background="wall_05.webp"
 			element={['noticias', 'consejos', 'artículos']} />
 
-	<section class="__bixo-phrase change-menu-color">
-		<div>
-			<h3>Estamos reuniendo el material importante para mostrarte en nuestro blog.</h3>
-		</div>
-	</section>
+	
+	<WhiteSection>
+        <Fragment slot="SectionContent">
+            <h3>Estamos reuniendo el material importante para mostrarte en nuestro blog.</h3>
+        </Fragment>
+    </WhiteSection>
 
 </Layout>

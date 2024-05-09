@@ -1,67 +1,58 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainSection from '../components/main-section.astro';
-import SimpleSection from '../components/simple-section.astro';
+import WhiteSection from '../components/white-section.astro';
 ---
 
-<Layout title="Qu&eacute; es y quienes somos en BichoTech">
+<Layout title="Qu&eacute; es y quienes somos en Bichotech" desc="En Bichotech contamos con muchos años de experiencia en cada persona que aporta su conocimiento.">
 	
 	<MainSection
-			title="A pesar de ser una agencia de reciente creación, cada integrante tiene una experiencia individual de muchos años."
+			title="Bichotech es una agencia joven pero con muchos años de experiencia."
 			background="bichotech.jpg"
 			element={['nacional', 'internacional', 'local', 'regional']} />
 
-	<section class="__bixo-phrase change-menu-color">
-		<div>
+	<WhiteSection>
+		<Fragment slot="SectionContent">
 			<h3>Paréceme, Sancho, que no hay refrán que no sea verdadero, porque todos son sentencias sacadas de la misma experiencia, madre de las ciencias todas.</h3>
 			<h5>&mdash; Miguel de Cervantes</h5>
-		</div>
-	</section>
+		</Fragment>
+	</WhiteSection>
 
 	<section class="black-background">
 		<div class="container">
 			<div class="column">
 				<h3>&iquest;Qué es Bichotech?</h3>
 				<p>
-					<strong>BichoTech</strong> es un espacio donde nuestro potencial más elevado reside en la creatividad y en la capacidad de análisis de todo lo que rodea a tu negocio. Aquí, creamos productos perfectamente adaptados a tus necesidades. Nuestra agencia creativa se especializa en estrategias de marca y presencia en medios digitales.
+					<strong>Bichotech</strong> es un espacio donde nuestro potencial más elevado reside en la creatividad y en la capacidad de análisis de todo lo que rodea a tu negocio. Aquí, creamos productos perfectamente adaptados a tus necesidades. Nos especializamos en estrategias de marca y presencia en medios digitales.
 				</p>
 				<p>
-					Nos apasiona explorar nuevas ideas y transformarlas en soluciones para nuestros clientes. Bienvenidos a <strong>BichoTech</strong>, donde la tecnología y la creatividad se fusionan para impulsar a tu negocio.
+					Nos apasiona explorar nuevas ideas y transformarlas en soluciones para ti. Bienvenido a <strong>Bichotech</strong>, donde la tecnología y la creatividad se fusionan.
 				</p>
 			</div>
 			<div class="column">
-				<h3>&iquest;Cómo es eso?</h3>
+				<h3>&iquest;Cómo sucede eso?</h3>
 				<p>
-					En <strong>BichoTech</strong>, nuestra creatividad fluye de manera constante, y nos deleitamos al dejarnos llevar por esa corriente. Nos apasiona la brillantez y la espontaneidad que surgen en cada sesión de lluvia de ideas, donde las formas y matices son libres. Posteriormente, les damos forma y matiz, transformándolas en soluciones innovadoras.
+					Nuestra creatividad fluye de manera constante, y nos deleitamos al dejarnos llevar por esa corriente. Nos apasiona la brillantez y la espontaneidad que surge en cada sesión de lluvia de ideas, donde las formas y matices son libres. Posteriormente, les damos forma y sentido, transformándolas en soluciones innovadoras.
 				</p>
 				<p>
-					Nuestro poder de análisis no se limita únicamente a nuestra área de desarrollo. También aplicamos nuestro enfoque analítico a tu negocio, tu marca, tu competencia, tu alcance y tus proyectos. No se trata solo de análisis fríos basados en números y estadísticas; también realizamos análisis psicológicos y humanos. Así es como creamos estrategias personalizadas y efectivas para nuestros clientes.
+					Nuestro poder de análisis no se limita únicamente a nuestra área de desarrollo. También aplicamos nuestro enfoque analítico a tu negocio, tu marca, tu competencia, tu alcance y tus proyectos. No se trata solo de análisis fríos basados en números y estadísticas; también realizamos análisis psicológicos y humanos. Así es como creamos estrategias efectivas.
 				</p>
 				<p>
-					En <strong>BichoTech</strong>, fusionamos la tecnología con la creatividad para impulsar el éxito de tu negocio.
+					En <strong>Bichotech</strong>, fusionamos la tecnología con la creatividad para impulsar tu negocio.
 				</p>
 			</div>
 			<div class="column">
 				<h3>&iquest;Y su experiencia?</h3>
 				<p>
-					Aunque <strong>BichoTech</strong> es una agencia de reciente creación, cada uno de nuestros integrantes aporta una amplia experiencia individual. Como analistas, programadores, animadores, editores de video, diseñadores y especialistas en branding, hemos acumulado muchos años de trayectoria.
+					Aunque <strong>Bichotech</strong> es una agencia de reciente creación, cada uno de nuestros integrantes aporta una gran experiencia individual. Como analistas, programadores, animadores, editores de video, diseñadores y especialistas en branding, hemos acumulado muchos años de trayectoria.
 				</p>
 				<p>
-					Nuestro equipo ha colaborado con empresas a nivel local, regional, nacional e internacional. Esta diversidad de contextos nos ha permitido adquirir conocimientos valiosos y adaptarnos a las necesidades específicas de cada cliente.
+					Nuestro equipo ha colaborado con empresas a nivel local, regional, nacional e internacional. Esta diversidad de contextos nos ha permitido adquirir conocimientos valiosos y adaptarnos a tus necesidades específicas.
 				</p>
 				<p>
-					En <strong>BichoTech</strong>, fusionamos la experiencia con la innovación para ofrecer soluciones creativas y efectivas.
+					Fusionamos la experiencia con la innovación para ofrecer soluciones creativas y efectivas.
 				</p>
 			</div>
-		<!-- </div>
-		<div class="container-logos">
-			<div class="item">Logo</div>
-			<div class="item">Logo</div>
-			<div class="item">Logo</div>
-			<div class="item">Logo</div>
-			<div class="item">Logo</div>
-			<div class="item">Logo</div>
-		</div> -->
 	</section>
 
 </Layout>

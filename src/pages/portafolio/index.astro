@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MainSection from '../../components/main-section.astro';
+import WhiteSection from '../../components/white-section.astro';
+---
+
+<Layout title="En BichoTech nos encanta presumir lo que hacemos" desc="Deseamos que estes completamente seguro de que somos profesionales, por eso te mostramos lo que hemos realizado en BichoTech.">
+	
+	<MainSection
+			title="Portafolio"
+			background="wall_03.webp"
+			element={['proyectos', 'marcas', 'clientes']} />
+
+    <WhiteSection>
+        <Fragment slot="SectionContent">
+            <h3>Estamos reuniendo el material importante para mostrarte nuestro trabajo.</h3>
+        </Fragment>
+    </WhiteSection>
+</Layout>
