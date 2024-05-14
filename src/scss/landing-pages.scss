@@ -19,6 +19,8 @@ section {
     margin: 80px auto;
 
     h4 {
+        margin-bottom: 30px;
+        
         @media screen and (width < 1300px){
             padding: 30px;
         }
@@ -56,6 +58,14 @@ section {
         
         li {
             padding: 15px 30px;
+
+            .icon-desc {
+                text-align: center;
+
+                img {
+                    width: 40%;
+                }
+            }
         }
     }
 
