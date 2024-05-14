@@ -19,6 +19,8 @@
             <li><input type="checkbox" /> Diseño de identidad visual</li>
             <li><input type="checkbox" /> Diseño UI/UX</li>
             <li><input type="checkbox" /> Desarrollo de aplicaciones</li>
+            <li><input type="checkbox" checked /> Busco combo de servicios</li>
+            <li><input type="checkbox" /> Todos los servicios</li>
         </ul>
     </div>
     <div class="form-element">
@@ -87,6 +89,30 @@
                 top: 0;
                 right: 0;
                 font-size: 2.5rem;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    width: 50%;
+                    margin: 10px 0;
+
+                    @media screen and (width < 560px){
+                        width: 100%;
+                    }
+                    
+                    & > input{
+                        display: inline-block;
+                        width: 20px !important;
+                        // height: 20px;
+                    }
+                }
             }
 
             input, textarea {
