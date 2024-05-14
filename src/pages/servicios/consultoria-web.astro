@@ -1,8 +1,80 @@
 ---
 import LPLayout from "../../layouts/LPLayout.astro";
 import LPHero from "../../components/lpHero.astro";
+import HalfContent from "../../components/halfContent.astro";
+import LPFooter from "../../sections/LPFooter.astro";
 ---
 
 <LPLayout title="Bichotech: servicio de consultoría web" desc="">
-    <LPHero title="Consultoría web" background="" titleColor="#fff" />
+    <LPHero title="Consultoría web" subTitle="Tu aliada para navegar el mundo digital con éxito" background="/assets/images/landing-pages/consultoria-web/servicio-de-consultoria-web.webp" titleColor="#fff" />
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/consultoria-web/ship.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <p>Imagina que tu empresa es como un barco navegando en el vasto océano de Internet. Sin un timón experimentado y una carta de navegación precisa, podrías perderte fácilmente, chocar con obstáculos o no llegar nunca a tu puerto de destino. Eso es precisamente lo que te ofrece la consultoría web: <strong>una guía experta para navegar el mundo digital con éxito</strong>.</p>
+            <p>Un consultor web, como Bichotech, te acompaña en el proceso de crear, optimizar y hacer crecer tu presencia en línea. A través de un análisis profundo de tu situación actual y tus objetivos, te ayudo a:</p>
+        </Fragment>
+    </HalfContent>
+
+    <section>
+        <div class="container">
+            <ul>
+                <li>
+                    <p><strong>Definir tu estrategia digital</strong></p>
+                    <p>Creamos un plan personalizado que alinea tus objetivos comerciales con las mejores prácticas del marketing digital, tomando en cuenta tu público objetivo, tu competencia y las tendencias del mercado.</p>
+                </li>
+                <li>
+                    <p><strong>Desarrollar un sitio web efectivo</strong></p>
+                    <p>Diseñamos y creamos un sitio web que no solo sea atractivo visualmente, sino que también esté optimizado para los motores de búsqueda (SEO), sea fácil de usar y te permita alcanzar tus objetivos de negocio.</p>
+                </li>
+                <li>
+                    <p><strong>Implementar estrategias de marketing digital</strong></p>
+                    <p>Te ayudamos a implementar las estrategias de marketing digital más adecuadas para tu negocio, como SEO, SEM, marketing de contenidos, email marketing y redes sociales.</p>
+                </li>
+                <li>
+                    <p><strong>Medir y analizar resultados</strong></p>
+                    <p>Monitoreamos el rendimiento de tu sitio web y tus campañas digitales para obtener información valiosa que nos permite optimizar tu estrategia y mejorar continuamente tus resultados.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="light-gray-background">
+        <div class="container">
+            <h4>¿Por qué es importante la consultoría web para tu negocio?</h4>
+            <ul>
+                <li>
+                    <p><strong>Te ayuda a alcanzar tus objetivos comerciales</strong></p>
+                    <p>Una presencia web sólida y efectiva te permite atraer nuevos clientes, aumentar tus ventas, generar leads y fortalecer tu marca en el mercado digital.</p>
+                </li>
+                <li>
+                    <p><strong>Te permite destacar frente a la competencia</strong></p>
+                    <p>En un mundo digital saturado, necesitas una presencia web que te diferencie y te haga destacar entre tus competidores.</p>
+                </li>
+                <li>
+                    <p><strong>Optimiza tu inversión en marketing digital</strong></p>
+                    <p>Un consultor web te ayuda a invertir tus recursos de manera inteligente y efectiva, maximizando el retorno de la inversión (ROI) de tus campañas digitales.</p>
+                </li>
+                <li>
+                    <p><strong>Te mantiene actualizado con las últimas tendencias</strong></p>
+                    <p>El mundo digital está en constante cambio. Un consultor web te ayuda a estar a la vanguardia de las últimas tendencias y tecnologías para que tu negocio siga siendo competitivo.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/servicio-al-cliente.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <h4>¿La consultoría web es solo para empresas grandes?</h4>
+            <p>¡Absolutamente no! Tanto las grandes empresas como las pequeñas y los negocios familiares pueden beneficiarse de la consultoría web. De hecho, para las empresas más pequeñas, este servicio puede ser aún más valioso, ya que les permite desde el principio establecer una base sólida para su presencia en línea y competir de manera efectiva en el mundo digital.</p>
+            <p>En resumen, la consultoría web es una inversión indispensable para cualquier negocio que quiera tener éxito en el mundo digital. Con una guía experta a tu lado, podrás navegar con confianza por el complejo panorama de Internet y alcanzar tus objetivos comerciales de manera efectiva.</p>
+            <p>¿Estás listo para llevar tu negocio al siguiente nivel en el mundo digital? <a href="/contacto/">¡No dudes en contactarnos!</a></p>
+        </Fragment>
+    </HalfContent>
+    <LPFooter />
 </LPLayout>

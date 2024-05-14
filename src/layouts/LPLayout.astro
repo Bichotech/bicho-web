@@ -7,7 +7,7 @@ interface Props {
 	desc?: string;
 }
 
-const { title, desc="Agencia interactiva especialista en creación de estrategias publicidad y presencia en medios electrónicos." } = Astro.props;
+const { title, desc="Agencia interactiva especialista en creación de estrategias publicidad y presencia en medios electrónicos." } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>

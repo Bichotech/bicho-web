@@ -1,8 +1,85 @@
 ---
 import LPLayout from "../../layouts/LPLayout.astro";
 import LPHero from "../../components/lpHero.astro";
+import HalfContent from "../../components/halfContent.astro";
+import LPFooter from "../../sections/LPFooter.astro";
 ---
 
-<LPLayout title="Bichotech: servicio de desarrollo de aplicaciones" desc="">
-    <LPHero title="Desarrollo de aplicaciones" background="" titleColor="#fff" />
+<LPLayout title="Bichotech: servicio de Desarrollo de aplicaciones" desc="">
+    <LPHero title="Desarrollo de aplicaciones" subTitle="Dando vida a tus ideas digitales" background="/assets/images/landing-pages/desarrollo-de-aplicaciones/servicio-de-desarrollo-de-aplicaciones.webp" titleColor="#fff" />
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/desarrollo-de-aplicaciones/responsive.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <p>Imagina que tienes una gran idea para una aplicación que podría mejorar la vida de las personas. Pero no sabes cómo programarla o convertirla en una realidad tangible. Ahí es donde entra en juego el desarrollo de aplicaciones. Un equipo de desarrolladores expertos de Bichotech, se encarga de transformar tu idea en una aplicación funcional y atractiva para cualquier dispositivo móvil o plataforma web.</p>
+            <p>En otras palabras, la auditoría gráfica es como un escáner de tu marca. Te permite ver lo que está funcionando bien y lo que no, para que puedas tomar decisiones informadas sobre cómo mejorar tu imagen y fortalecer tu presencia en el mercado.</p>
+        </Fragment>
+    </HalfContent>
+
+    <section>
+        <div class="container">
+            <h4>El proceso de desarrollo de aplicaciones implica:</h4>
+            <ul>
+                <li>
+                    <p><strong>Análisis y definición de requisitos</strong></p>
+                    <p>Trabajamos contigo para comprender a fondo tu idea, tu público objetivo y las funcionalidades que deseas incluir en la aplicación.</p>
+                </li>
+                <li>
+                    <p><strong>Diseño de la interfaz de usuario (UI)</strong></p>
+                    <p>Creamos una interfaz intuitiva y atractiva que sea fácil de usar para tus usuarios.</p>
+                </li>
+                <li>
+                    <p><strong>Desarrollo del back-end</strong></p>
+                    <p>Construimos la parte lógica de la aplicación, que se encarga de almacenar datos, procesar información y comunicarse con los servidores.</p>
+                </li>
+                <li>
+                    <p><strong>Pruebas y control de calidad</strong></p>
+                    <p>Probamos exhaustivamente la aplicación para asegurarnos de que funciona correctamente y no tiene errores.</p>
+                </li>
+                <li>
+                    <p><strong>Implementación y lanzamiento</strong></p>
+                    <p>Publicamos la aplicación en las tiendas de aplicaciones o en tu sitio web para que tus usuarios puedan descargarla y usarla.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="light-gray-background">
+        <div class="container">
+            <h4>¿Por qué es importante el desarrollo de aplicaciones para tu negocio?</h4>
+            <ul>
+                <li>
+                    <p><strong>Te permite llegar a un público más amplio</strong></p>
+                    <p>Las aplicaciones móviles te dan la oportunidad de llegar a millones de usuarios en todo el mundo.</p>
+                </li>
+                <li>
+                    <p><strong>Mejora la experiencia del cliente</strong></p>
+                    <p>Ofrecer una aplicación móvil a tus clientes puede mejorar su experiencia y fidelizarlos.</p>
+                </li>
+                <li>
+                    <p><strong>Aumenta tus ventas</strong></p>
+                    <p>Puedes vender productos o servicios directamente a través de tu aplicación.</p>
+                </li>
+                <li>
+                    <p><strong>Obtén información valiosa sobre tus usuarios</strong></p>
+                    <p>Las aplicaciones te permiten recopilar datos sobre el comportamiento de tus usuarios, lo que te ayuda a mejorar tu producto y tu estrategia de marketing.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/servicio-al-cliente.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <h4>¿El desarrollo de aplicaciones es solo para empresas grandes?</h4>
+            <p>¡Absolutamente no! Tanto las grandes empresas como las pequeñas y los negocios familiares pueden beneficiarse del desarrollo de aplicaciones. De hecho, para las empresas más pequeñas, este servicio puede ser aún más valioso, ya que les permite crear aplicaciones personalizadas que les ayuden a diferenciarse de la competencia y llegar a su público objetivo de manera más efectiva.</p>
+            <p>En resumen, el desarrollo de aplicaciones es una herramienta poderosa que puede ayudarte a alcanzar tus objetivos comerciales y llevar tu negocio al siguiente nivel. </p>
+            <p>Si tienes una idea para una aplicación, no dudes en <a href="/contacto/">contactarnos</a>. ¡Juntos podemos convertirla en una realidad!</p>
+        </Fragment>
+    </HalfContent>
+    <LPFooter />
 </LPLayout>

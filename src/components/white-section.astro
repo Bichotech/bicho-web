@@ -1,11 +1,14 @@
-<section class="__bixo-phrase change-menu-color">
-	<div>
+<section id="__bixo-phrase" class="change-menu-color scroll-snap">
+	
 		<slot name="SectionContent" />
-	</div>
+	
 </section>
 
 <style lang="scss">
-	.__bixo-phrase {
+	#__bixo-phrase {
+		@media screen and (width < 1600px){
+			padding: 30px;
+		}
 		@media screen and (width < 600px){
 			padding: 30px;
 		}

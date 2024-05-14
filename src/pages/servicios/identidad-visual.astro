@@ -1,8 +1,85 @@
 ---
 import LPLayout from "../../layouts/LPLayout.astro";
 import LPHero from "../../components/lpHero.astro";
+import HalfContent from "../../components/halfContent.astro";
+import LPFooter from "../../sections/LPFooter.astro";
 ---
 
 <LPLayout title="Bichotech: servicio de diseño de identidad visual" desc="">
-    <LPHero title="Diseño de identidad visual" background="" titleColor="#fff" />
+    <LPHero title="Diseño de identidad visual" subTitle="Vistiendo a tu marca para el éxito" background="/assets/images/landing-pages/identidad-visual/servicio-de-identidad-visual.webp" titleColor="#fff" />
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/identidad-visual/person.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <p>Imagina a tu marca como una persona. Para causar una buena primera impresión y ser memorable, necesitas vestirla con ropa adecuada y que refleje tu estilo único.</p>
+            <p>Eso es precisamente lo que hace el diseño de identidad visual: crear una apariencia atractiva y consistente para tu marca en todos los aspectos.</p>
+            <p>Un diseñador de identidad visual, como Bichotech, trabaja contigo para crear una representación visual de tu marca que incluya:</p>
+        </Fragment>
+    </HalfContent>
+
+    <section>
+        <div class="container">
+            <ul>
+                <li>
+                    <p><strong>Logotipo</strong></p>
+                    <p>Un símbolo icónico que representa a tu marca y la hace reconocible al instante.</p>
+                </li>
+                <li>
+                    <p><strong>Paleta de colores</strong></p>
+                    <p>Una selección de colores que evoquen las emociones y valores asociados a tu marca.</p>
+                </li>
+                <li>
+                    <p><strong>Tipografía</strong></p>
+                    <p>Las fuentes que se utilizarán en tu comunicación, tanto en medios impresos como digitales.</p>
+                </li>
+                <li>
+                    <p><strong>Elementos gráficos</strong></p>
+                    <p>Imágenes, iconos o patrones que complementen tu logotipo y paleta de colores.</p>
+                </li>
+                <li>
+                    <p><strong>Guía de estilo</strong></p>
+                    <p>Un documento que define cómo usar correctamente todos los elementos de la identidad visual de tu marca.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="light-gray-background">
+        <div class="container">
+            <h4>¿Por qué es importante el diseño de identidad visual para tu marca?</h4>
+            <ul>
+                <li>
+                    <p><strong>Crea una imagen profesional</strong></p>
+                    <p>Una identidad visual bien diseñada te hace ver como una empresa seria y profesional, lo que genera confianza en tus clientes y socios comerciales.</p>
+                </li>
+                <li>
+                    <p><strong>Te diferencia de la competencia</strong></p>
+                    <p>En un mercado saturado, una identidad visual única te ayuda a destacar entre tus competidores y a captar la atención de tu público objetivo.</p>
+                </li>
+                <li>
+                    <p><strong>Fortalece el reconocimiento de marca</strong></p>
+                    <p>Cuanto más consistente sea tu identidad visual en todos los canales de comunicación, más fácil será para las personas recordar y reconocer tu marca.</p>
+                </li>
+                <li>
+                    <p><strong>Comunica tu mensaje de marca</strong></p>
+                    <p>Los elementos visuales son poderosos comunicadores. Una identidad visual bien diseñada te permite transmitir tu mensaje de marca de manera clara, consistente y atractiva a tu público objetivo.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/servicio-al-cliente.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <h4>¿El diseño de identidad visual es solo para empresas grandes?</h4>
+            <p>¡En absoluto! Tanto las grandes empresas como las pequeñas y los negocios familiares pueden beneficiarse del diseño de identidad visual. De hecho, para las empresas más pequeñas, este servicio puede ser aún más valioso, ya que les permite desde el principio establecer una identidad de marca sólida y coherente que impulse su crecimiento a largo plazo.</p>
+            <p>En resumen, el diseño de identidad visual es una inversión esencial para cualquier empresa que quiera tener éxito en el mercado actual. Una identidad visual fuerte y atractiva te ayudará a diferenciarte, comunicarte de manera efectiva y construir una marca memorable que genere confianza y lealtad entre tus clientes.</p>
+            <p>¿Estás listo para darle a tu marca la imagen que se merece? <a href="/contacto/">¡No dudes en contactarnos!</a></p>
+        </Fragment>
+    </HalfContent>
+    <LPFooter />
 </LPLayout>

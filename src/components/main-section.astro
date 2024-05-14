@@ -9,7 +9,7 @@ const { title, background, element} = Astro.props as PROPS;
 const backgroundImage = "background-image: url('/assets/images/" + background + "');";
 ---
 
-<section id="__bx-main-section" class="back-image" style={ backgroundImage }>
+<section id="__bx-main-section" class="scroll-snap back-image" style={ backgroundImage }>
     <!-- <div class="overlay"></div> -->
 
     <div class="__bx-paragraph-centered">
@@ -19,7 +19,7 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
     <div class="text-decorated">
         {
             element.map((value:string, index:number) => (
-                <div class:list={[`text-${index + 1}`, 'stroke-text']} style={{ marginLeft: index % 2 ? `${index * 1.618}%` : `-${index * 1.618}%` }}>
+                <div class:list={[`text-${index + 1}`, 'stroke-text']} style={{ marginLeft: index % 2 ? `${index * 4.854}%` : `${index * 1.618}%` }}>
                     <div class="main-text">{value}</div>
                     <div class="pink-layer">{value}</div>
                     <div class="teal-layer">{value}</div>
@@ -64,7 +64,7 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
 
         .text-decorated {
             position: absolute;
-            width: 50%;
+            width: 40%;
             right: 0;
             opacity: 0.5;
 

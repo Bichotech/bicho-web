@@ -1,8 +1,80 @@
 ---
 import LPLayout from "../../layouts/LPLayout.astro";
 import LPHero from "../../components/lpHero.astro";
+import HalfContent from "../../components/halfContent.astro";
+import LPFooter from "../../sections/LPFooter.astro";
 ---
 
-<LPLayout title="Bichotech: servicio de diseño de interfaces de usuario [UI]" desc="">
-    <LPHero title="diseño de interfaces de usuario [UI]" background="" titleColor="#fff" />
+<LPLayout title="Bichotech: servicio de Diseño de interfacesy expeeriencia de usuario [UI/UX]" desc="">
+    <LPHero title="Diseño de interfaces y experiencia de usuario [UI/UX]" subTitle="Creando productos digitales que enamoran" background="/assets/images/landing-pages/interfaces-de-usuario/servicio-de-interfaces-de-usuario.webp" titleColor="#fff" />
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/interfaces-de-usuario/house.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <p>Imagina que tu marca es como una casa. Si la estructura y el diseño de la casa no son adecuados, la experiencia de vivir en ella será incómoda y frustrante. Lo mismo sucede con los productos digitales: si su interfaz y experiencia de usuario (UI/UX) no están bien diseñadas, los usuarios se frustrarán y abandonarán tu producto.</p>
+            <p>Ahí es donde entra en juego el diseño de interfaces y experiencia de usuario. Un equipo de expertos en UI/UX dentro de Bichotech, se encarga de diseñar productos digitales que sean:</p>
+        </Fragment>
+    </HalfContent>
+
+    <section>
+        <div class="container">
+            <ul>
+                <li>
+                    <p><strong>Fáciles de usar</strong></p>
+                    <p>La interfaz debe ser intuitiva y fácil de navegar, incluso para usuarios principiantes.</p>
+                </li>
+                <li>
+                    <p><strong>Atractivos</strong></p>
+                    <p>El diseño visual debe ser atractivo y estéticamente agradable, acorde con la identidad de tu marca.</p>
+                </li>
+                <li>
+                    <p><strong>Eficientes</strong></p>
+                    <p>Los usuarios deben poder encontrar lo que buscan y realizar las tareas deseadas de manera rápida y sencilla.</p>
+                </li>
+                <li>
+                    <p><strong>Satisfactorios</strong></p>
+                    <p>La experiencia general de uso debe ser placentera y generar emociones positivas en los usuarios.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="light-gray-background">
+        <div class="container">
+            <h4>¿Por qué es importante el diseño de UI/UX para tu producto digital?</h4>
+            <ul>
+                <li>
+                    <p><strong>Aumenta la satisfacción del cliente</strong></p>
+                    <p>Un producto con una buena interfaz y experiencia de usuario genera clientes satisfechos que son más propensos a regresar y recomendar tu producto a otros.</p>
+                </li>
+                <li>
+                    <p><strong>Mejora la tasa de conversión</strong></p>
+                    <p>Un diseño UI/UX efectivo puede aumentar la cantidad de usuarios que realizan las acciones deseadas, como comprar un producto o registrarse en un servicio.</p>
+                </li>
+                <li>
+                    <p><strong>Reduce los costos de soporte</strong></p>
+                    <p>Un producto fácil de usar requiere menos asistencia técnica, lo que te ahorra dinero a largo plazo.</p>
+                </li>
+                <li>
+                    <p><strong>Fortalece la reputación de tu marca</strong></p>
+                    <p>Un producto con una buena experiencia de usuario contribuye a crear una imagen positiva de tu marca.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/servicio-al-cliente.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <h4>¿El diseño de UI/UX es solo para empresas grandes?</h4>
+            <p>¡Para nada! Tanto las grandes empresas como las pequeñas y los negocios familiares pueden beneficiarse del diseño de UI/UX. De hecho, para las empresas más pequeñas, este servicio puede ser aún más valioso, ya que les permite desde el principio crear productos digitales que sean competitivos y que ofrezcan una excelente experiencia de usuario.</p>
+            <p>En resumen, el diseño de UI/UX es una inversión crucial para cualquier empresa que quiera tener éxito en el mundo digital actual. Un producto con una interfaz y experiencia de usuario bien diseñadas te ayudará a atraer más clientes, aumentar tus ventas y construir una marca sólida y duradera.</p>
+            <p>¿Estás listo para crear un producto digital que enamore a tus usuarios? <a href="/contacto/">¡No dudes en contactarnos!</a></p>
+        </Fragment>
+    </HalfContent>
+    <LPFooter />
 </LPLayout>

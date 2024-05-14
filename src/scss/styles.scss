@@ -157,8 +157,15 @@ section {
     display: flex;
     align-items: center;
     position: relative;
-    scroll-snap-align: center;
     padding: 90px 120px;
+
+    &.scroll-snap {
+        scroll-snap-align: center;
+
+        @media screen and (width < 1600px){
+            scroll-snap-align: unset;
+        }
+    }
 
     @media screen and (width < 1600px){
         height: auto;
@@ -211,7 +218,7 @@ section {
         }
     }
 
-    &.__bixo-phrase {
+    &.__bixo-phrase, &#__bixo-phrase {
         justify-content: center;
 
         @media screen and (width < 1600px){
@@ -283,6 +290,24 @@ section {
             }
         }
     }
+
+    .social-net {
+		display: flex;
+		list-style: none;
+		gap: 20px;
+		justify-content: flex-start;
+		margin-top: 30px;
+
+		li {
+			a {
+				color: transparent;
+				display: block;
+				width: 24px;
+				height: 24px;
+				overflow: hidden;
+			}
+		}
+	}
 }
 
 .back-image {

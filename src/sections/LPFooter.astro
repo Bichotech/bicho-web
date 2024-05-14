@@ -1,0 +1,73 @@
+---
+
+---
+
+<footer>
+    <div class="container">
+        <ul>
+            <li>
+                <div class="bixo-logo">
+                    <a href="/"><img src="/assets/images/signature.webp" width="100%" alt=""></a>
+                </div>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="/servicios/auditoria-grafica">Auditoría gráfica</a></li>
+                    <li><a href="/servicios/consultoria-grafica">Consultoría gráfica</a></li>
+                    <li><a href="/servicios/consultoria-web">Consultoría web</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="/servicios/identidad-visual">Diseño de identidad visual</a></li>
+                    <li><a href="/servicios/interfaces-de-usuario">Diseño de interfaces y esperiencia de usuario [UI/UX]</a></li>
+                    <li><a href="/servicios/desarrollo-de-aplicaciones">Desarrollo de aplicaciones web</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<style lang="scss">
+    footer {
+        background-color: black;
+
+        .bixo-logo {
+
+        }
+        
+        .container {
+            margin: 0 auto;
+            padding: 80px 0;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+
+                @media screen and (width < 750px) {
+                    flex-direction: column;
+                }
+
+                li {
+                    ul {
+                        display: block;
+                        columns: 1;
+
+                        li {
+                            a {
+                                color: var(--orange-bixo-color);
+                                font-size: 1.6rem;
+
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>

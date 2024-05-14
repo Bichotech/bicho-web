@@ -4,8 +4,16 @@
 
 <section class="half-content">
     <div class="container">
-        <div class="half-item">Mitad 1</div>
-        <div class="half-item">Mitad 2</div>
+        <div class="half-item">
+            <div class="image-box">
+                <slot name="image-box" />
+            </div>
+        </div>
+        <div class="half-item">
+            <div class="text-box">
+                <slot name="text-box" />
+            </div>
+        </div>
     </div>
 </section>
 
@@ -19,7 +27,28 @@
             max-width: 1320px;
             width: 100%;
             margin: 80px auto;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            @media screen and (width < 750px){
+                grid-template-columns: 1fr;
+            }
+
+            .half-item {
+                position: relative;
+                justify-self: center;
+                align-self: center;
+
+                .image-box {
+                    text-align: center;
+                }
+
+                .text-box {
+                    color: var(--black-color);
+                    display: block;
+                    padding: 30px;
+                }
+            }
         }
     }
 </style>

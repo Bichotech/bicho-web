@@ -1,13 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import MainSection from '../components/main-section.astro';
+import SimpleSection from '../components/simple-section.astro';
+import { Fb, Yt, Tt, Be, Ig, In } from '../assets/icons/index.astro';
 ---
 
 <Layout title="Bichotech agradece su mensaje" desc="Gracias por ponerse en contacto con nostros.">
 	
-	<MainSection
-			title="Gracias por su mensaje"
-			background="bichotech.jpg"
-			element={[ "gracias"]} />
-    </WhiteSection>
+	<SimpleSection
+	title="Gracias por tu mensaje"
+	subtitle="Pronto nos podremos en contacto"
+	background="/assets/images/gracias-por-su-mensaje.webp">
+	<Fragment slot="SectionContent">
+		<p>Revisamos todos y cada uno de los mensajes que recibimos, nos importa ayudarte a crecer.</p>
+		<p>Pronto nos comunicaremos para agendar una llamada o concretar una reunión y conocer tus inquietudes:</p>
+		
+		<ul class="social-net">
+			<li><a href="https://www.facebook.com/bichotech.agencia" target="_blank"><Fb />Bichotech en Facebook</a></li>
+			<li><a href="https://www.linkedin.com/company/bichotech/" target="_blank"><In />Bichotech en LinkedIn</a></li>
+			<li><a href="https://www.instagram.com/bichotech_agencia" target="_blank"><Ig />Bichotech en Instagram</a></li>
+			<!-- <li><a href="#"><Tt />Bichotech en TikTok</a></li>
+			<li><a href="#"><Yt />Bichotech en YouTube</a></li>
+			<li><a href="#"><Be />Bichotech en Behance</a></li> -->
+		</ul>
+		<p>De nuevo ¡Muchas Gracias!</p>
+		<div class="signature">
+			<img src="/assets/images/signature.webp" width="200" alt="">
+		</div>
+	</Fragment>
+</SimpleSection>
 </Layout>

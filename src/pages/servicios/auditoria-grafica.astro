@@ -2,10 +2,57 @@
 import LPLayout from "../../layouts/LPLayout.astro";
 import LPHero from "../../components/lpHero.astro";
 import HalfContent from "../../components/halfContent.astro";
+import LPFooter from "../../sections/LPFooter.astro";
 ---
 
 <LPLayout title="Bichotech: servicio de auditoría gráfica" desc="">
-    <LPHero title="Auditoria gráfica" background="" titleColor="#fff" />
+    <LPHero title="Auditoria gráfica" subTitle="Cuidamos la salud visual de tu marca" background="/assets/images/landing-pages/auditoria-grafica/servicio-de-auditoria-grafica.webp" titleColor="#fff" />
 
-    <HalfContent />
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/auditoria-grafica/tree.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <p>Imagina tu marca como un árbol: con el tiempo, las ramas se inclinan, las hojas se marchitan y las raíces se debilitan. Para asegurarte de que tu árbol siga creciendo fuerte y frondoso, necesitas una evaluación periódica, ¿no es así?</p>
+            <p>Eso es precisamente lo que es una auditoría gráfica: una evaluación profunda de la identidad visual de tu marca. Un especialista en marcas, como yo, analiza cada elemento visual que representa a tu marca, desde tu logotipo y colores hasta tu sitio web y materiales de marketing. El objetivo es identificar cualquier problema o área de oportunidad que pueda estar afectando la forma en que tu público objetivo percibe tu marca.</p>
+            <p>En otras palabras, la auditoría gráfica es como un escáner de tu marca. Te permite ver lo que está funcionando bien y lo que no, para que puedas tomar decisiones informadas sobre cómo mejorar tu imagen y fortalecer tu presencia en el mercado.</p>
+        </Fragment>
+    </HalfContent>
+
+    <section class="light-gray-background">
+        <div class="container">
+            <h4>¿Qué beneficios aporta una auditoría gráfica a tu marca?</h4>
+            <ul>
+                <li>
+                    <p><strong>Identifica problemas de coherencia</strong></p>
+                    <p>Asegura que todos los elementos visuales de tu marca se usen de manera consistente en todos los canales, creando una imagen unificada y profesional.</p>
+                </li>
+                <li>
+                    <p><strong>Detecta elementos desactualizados</strong></p>
+                    <p>Tu marca debe evolucionar con el tiempo. Una auditoría gráfica te ayuda a identificar aquellos elementos visuales que ya no están en sintonía con tu identidad actual o con las tendencias del mercado.</p>
+                </li>
+                <li>
+                    <p><strong>Revela oportunidades de mejora</strong></p>
+                    <p>Un especialista experimentado puede identificar aspectos de tu identidad visual que podrían potenciarse para comunicar mejor tu mensaje y conectar con tu público objetivo de manera más efectiva.</p>
+                </li>
+                <li>
+                    <p><strong>Fortalece tu presencia en el mercado</strong></p>
+                    <p>Una marca con una identidad visual sólida y coherente genera confianza y credibilidad, lo que se traduce en una mayor competitividad y mejores resultados comerciales.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/servicio-al-cliente.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <h4>¿Es la auditoría gráfica un servicio exclusivo para empresas grandes?</h4>
+            <p>¡Para nada! Tanto las grandes empresas como las pequeñas y los negocios familiares pueden beneficiarse de una auditoría gráfica. De hecho, para las empresas más pequeñas, este servicio puede ser aún más valioso, ya que les permite optimizar sus recursos y enfocarse en los aspectos que realmente impactan su imagen y su crecimiento.</p>
+            <p>En resumen, una auditoría gráfica es una inversión inteligente que te ayuda a proteger la salud visual de tu marca y a garantizar que siga comunicando el mensaje correcto a las personas correctas.</p>
+            <p>¿Estás listo para darle a tu marca el chequeo visual que necesita? <a href="/contacto/">¡No dudes en contactarnos!</a></p>
+        </Fragment>
+    </HalfContent>
+    <LPFooter />
 </LPLayout>

@@ -1,15 +1,23 @@
 ---
 interface PROPS {
     title: string;
+    subTitle?: string;
     background: string;
     titleColor?: string;
 }
 
-const { title, background, titleColor="#000" } = Astro.props as PROPS;
+const { title, subTitle, background, titleColor="#000" } = Astro.props as PROPS;
 ---
 
 <header style={{ backgroundImage: `url(${background})` }}>
-    <h2>{ title }</h2>
+    <div class="landing-page-hero-text">
+        <h2>{ title }</h2>
+        { subTitle &&
+            <h5>{ subTitle }</h5>
+        }
+        
+    </div>
+    <div class="overlay"></div>
 </header>
 
 <style lang="scss" define:vars={{ titleColor }}>
@@ -17,17 +25,29 @@ const { title, background, titleColor="#000" } = Astro.props as PROPS;
         position: relative;
         min-height: 650px;
         background-color: var(--navy-bixo-color);
+        background-position: top center;
         padding: 80px 120px;
+        background-size: cover;
 
         @media screen and (width < 600px) {
             padding: 80px 30px;
         }
 
-        h2 {
+        .landing-page-hero-text {
             position: absolute;
             color: var(--titleColor);
             top: 50%;
             transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
         }
     }
 </style>

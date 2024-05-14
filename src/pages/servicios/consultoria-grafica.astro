@@ -1,8 +1,80 @@
 ---
 import LPLayout from "../../layouts/LPLayout.astro";
 import LPHero from "../../components/lpHero.astro";
+import HalfContent from "../../components/halfContent.astro";
+import LPFooter from "../../sections/LPFooter.astro";
 ---
 
 <LPLayout title="Bichotech: servicio de consultoría gráfica" desc="">
-    <LPHero title="Consultoría gráfica" background="" titleColor="#fff" />
+    <LPHero title="Consultoría gráfica" subTitle="Tu brújula hacia una identidad visual efectiva" background="/assets/images/landing-pages/consultoria-grafica/servicio-de-consultoria-grafica.webp" titleColor="#fff" />
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/consultoria-grafica/travel.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <p>Imagina que estás emprendiendo un viaje a un lugar desconocido. Sin un mapa o una brújula, podrías perderte fácilmente y no llegar a tu destino. Lo mismo sucede con la identidad visual de tu marca: si no cuentas con una guía experta, podrías desviarte del camino correcto y no alcanzar los resultados que deseas.</p>
+            <p>Ahí es donde entra en juego la consultoría gráfica. Un consultor de diseño gráfico, como Bichotech, te acompaña en el proceso de crear y fortalecer la identidad visual de tu marca. A través de un análisis profundo y una estrategia personalizada, te ayudamos a:</p>
+        </Fragment>
+    </HalfContent>
+
+    <section>
+        <div class="container">
+            <ul>
+                <li>
+                    <p><strong>Definir la esencia de tu marca</strong></p>
+                    <p>Descubrimos los valores, la personalidad y el mensaje único que tu marca quiere transmitir al mundo.</p>
+                </li>
+                <li>
+                    <p><strong>Diseñar una identidad visual sólida</strong></p>
+                    <p>Creamos un conjunto de elementos visuales coherentes y atractivos, como tu logotipo, paleta de colores, tipografía y estilo gráfico, que reflejen fielmente la esencia de tu marca.</p>
+                </li>
+                <li>
+                    <p><strong>Comunicar tu marca de manera efectiva</strong></p>
+                    <p>Desarrollamos una guía de estilo que define cómo usar correctamente los elementos visuales de tu marca en todos los canales de comunicación, desde tu sitio web y materiales impresos hasta tus redes sociales y presencia digital.</p>
+                </li>
+                <li>
+                    <p><strong>Adaptar tu marca a la evolución</strong></p>
+                    <p>Te ayudamos a mantener tu identidad visual fresca y relevante a medida que tu marca crece y se adapta a las nuevas tendencias del mercado.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="light-gray-background">
+        <div class="container">
+            <h4>¿Por qué es importante la consultoría gráfica para tu marca?</h4>
+            <ul>
+                <li>
+                    <p><strong>Construye una marca reconocible</strong></p>
+                    <p>Una identidad visual sólida te ayuda a diferenciarte de la competencia y a crear una marca memorable que los consumidores puedan reconocer y recordar fácilmente.</p>
+                </li>
+                <li>
+                    <p><strong>Comunica tu mensaje de manera clara</strong></p>
+                    <p>Los elementos visuales son poderosos comunicadores. Una identidad visual bien diseñada te permite transmitir tu mensaje de marca de manera clara, consistente y atractiva a tu público objetivo.</p>
+                </li>
+                <li>
+                    <p><strong>Fortalece la confianza y la credibilidad</strong></p>
+                    <p>Una marca con una identidad visual profesional y consistente genera confianza y credibilidad en tus clientes, proveedores y socios comerciales.</p>
+                </li>
+                <li>
+                    <p><strong>Aumenta el valor de tu marca</strong></p>
+                    <p>Una identidad visual fuerte es un activo valioso para tu negocio. Te ayuda a destacar en el mercado, atraer nuevos clientes y fidelizar a los existentes.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <HalfContent>
+        <Fragment slot="image-box">
+            <img src="/assets/images/landing-pages/servicio-al-cliente.webp" width="80%" alt="">
+        </Fragment>
+        <Fragment slot="text-box">
+            <h4>¿La consultoría gráfica es solo para empresas grandes?</h4>
+            <p>¡Para nada! Tanto las grandes empresas como las pequeñas y los negocios familiares pueden beneficiarse de la consultoría gráfica. De hecho, para las empresas más pequeñas, este servicio puede ser aún más valioso, ya que les permite desde el principio establecer una identidad visual sólida y coherente que impulse su crecimiento a largo plazo.</p>
+            <p>En resumen, la consultoría gráfica es una inversión inteligente que te ayuda a crear una identidad visual poderosa y duradera para tu marca. Con una brújula experta guiándote, podrás navegar con éxito el camino hacia el éxito y alcanzar tus objetivos comerciales.</p>
+            <p>¿Estás listo para darle a tu marca la identidad visual que se merece? <a href="/contacto/">¡No dudes en contactarnos!</a></p>
+        </Fragment>
+    </HalfContent>
+    <LPFooter />
 </LPLayout>
