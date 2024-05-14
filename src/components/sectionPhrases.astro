@@ -1,0 +1,22 @@
+<section id="__bixo-quote" class="change-menu-color scroll-snap">
+	<div class="quote-text">
+        <slot name="SectionContent" />
+    </div>
+</section>
+
+<style lang="scss">
+#__bixo-quote {
+    display: block;
+
+    .quote-text {
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media screen and (width < 1600px){
+        padding: 30px;
+    }
+}
+</style>

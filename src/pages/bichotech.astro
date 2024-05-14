@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import MainSection from '../components/main-section.astro';
 import WhiteSection from '../components/white-section.astro';
+import SectionPhrases from '../components/sectionPhrases.astro';
 ---
 
 <Layout title="Qu&eacute; es y quienes somos en Bichotech" desc="En Bichotech contamos con muchos años de experiencia en cada persona que aporta su conocimiento.">
@@ -11,12 +12,12 @@ import WhiteSection from '../components/white-section.astro';
 			background="bichotech.jpg"
 			element={['nacional', 'internacional', 'local', 'regional']} />
 
-	<WhiteSection>
+	<SectionPhrases>
 		<Fragment slot="SectionContent">
 			<h3>Paréceme, Sancho, que no hay refrán que no sea verdadero, porque todos son sentencias sacadas de la misma experiencia, madre de las ciencias todas.</h3>
 			<h5>&mdash; Miguel de Cervantes</h5>
 		</Fragment>
-	</WhiteSection>
+	</SectionPhrases>
 
 	<section class="black-background scroll-snap">
 		<div class="container">
