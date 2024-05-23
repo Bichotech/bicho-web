@@ -1,20 +1,19 @@
 ---
 // BIENVENIDO SECTION
-import MalenkyLogo from '../assets/images/malenkyLogo.astro';
 ---
 
 <section id="__bx-bienvenido-section" class="scroll-snap">
     <div class="__bixo-element">
         <div class="__bx-paragraph-centered">
-            <h6>&mdash; Septiembre 05, 2023</h6>
-            <h3>¡Bienvenido a la familia, Malenky!</h3>
-            <p>Malenky es un emprendimiento que se dedica a la creacion de amigurumis y otros productos en crochet. Se realizará una estrategia para medios electrónicos, asi como la creación de historias para algunos personajes y su identidad visual.</p>
+            <h6>&mdash; Mayo, 2024</h6>
+            <h3>¡Bienvenido a la familia, Dental Carranza!</h3>
+            <p>El Dr. Ramiro Carranza es un odontólogo que se especializa en la creación de protesis a la medida de sus pacientes, además de ser un excelente dentista. Se realizará una estrategia para medios electrónicos, sitio web y su identidad visual.</p>
             <a href="/clientes/" class="base-btn">Conoce a nuestros clientes</a>
         </div>
     </div>
     <div class="__bixo-element centered-image back-orange">
         <div class="overlay"></div>
-        <MalenkyLogo />
+        <img src="/assets/images/dental-carranza-logo.webp" alt="">
     </div>
 </section>
 
@@ -35,6 +34,16 @@ import MalenkyLogo from '../assets/images/malenkyLogo.astro';
                 color: var(--orange-bixo-color);
                 text-transform: uppercase;
                 letter-spacing: 0.2rem;
+            }
+        }
+
+        .__bixo-element {
+            img {
+                width: 500px;
+
+                @media screen and (width < 800px){
+                    width: 300px;
+                }
             }
         }
     }

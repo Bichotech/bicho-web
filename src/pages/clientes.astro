@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainSection from '../components/main-section.astro';
-import Customers from '../sections/customers.astro';
+import Customers from '../components/customers.astro';
 // import SimpleSection from '../components/simple-section.astro';
 ---
 
@@ -9,8 +9,25 @@ import Customers from '../sections/customers.astro';
 	
 	<MainSection
 			title="Clientes"
-			background="bichotech.jpg"
+			background="wall_07.webp"
 			element={[ "gracias", "por tu", "confianza"]} />
 
-	<Customers />
+	<Customers CustomersArray={[
+		[
+			'logo-de-la-clinica-dental-carranza.webp',
+			'Dental Carranza del Dr. Ramiro Carranza'
+		],
+		[
+			'logo-para-el-artista-plastico-heber-banda.webp',
+			'Heber Banda, artísta plástico'
+		],
+		[
+			'logo-de-la-empresa-mooving-logistics.webp',
+			'Mooving Logistics, servicios de logística en Monterrey, NL'
+		],
+		[
+			'logo-del-negocio-malenky.webp',
+			'Malenky es nuestro primer cliente creando personajes en crochet'
+		]
+	]} />
 </Layout>
