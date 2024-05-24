@@ -22,9 +22,10 @@ if ($_POST) {
 	
 	$sentMail = @mail($to_Email, $subject, $body, $headers);
 	
-	if(!$sentMail)
-	{
+	if(!$sentMail) {
 		echo 'No se pudo enviar la informacíon, favor de intentar más tarde.';
+	} else {
+		echo 'Si ser envió.' . $body;
 	}
 }
 ?>
