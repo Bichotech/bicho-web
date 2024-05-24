@@ -20,7 +20,9 @@ if ($_POST) {
 	'Reply-To: no-reply@bicho.tech' . "\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 	
-	$sentMail = @mail($to_Email, $subject, $body, $headers);
+	$sentMail = mail($to_Email, $subject, $body, $headers);
+
+	echo $sentMail;
 	
 	if(!$sentMail) {
 		echo 'No se pudo enviar la informacíon, favor de intentar más tarde.';
