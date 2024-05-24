@@ -8,20 +8,22 @@
         <div class="asteriks">*</div>
     </div>
     <div class="form-element">
-        <input type="text" name="txtCompany" id="txtCompany" placeholder="Compañía" />
+        <input type="text" name="txtCompany" id="txtCompany" placeholder="Compañía o negocio" />
     </div>
     <div class="form-element">
-        <h4>Solicitud de servicio</h4>
-        <ul>
-            <li><input type="checkbox" /> Auditoria gráfica</li>
-            <li><input type="checkbox" /> Consultoria gráfica</li>
-            <li><input type="checkbox" /> Consultoría web</li>
-            <li><input type="checkbox" /> Diseño de identidad visual</li>
-            <li><input type="checkbox" /> Diseño UI/UX</li>
-            <li><input type="checkbox" /> Desarrollo de aplicaciones</li>
-            <li><input type="checkbox" checked /> Busco combo de servicios</li>
-            <li><input type="checkbox" /> Todos los servicios</li>
-        </ul>
+        <select name="slServices" id="sl-services">
+            <option value="-">Solicitud de servicios</option>
+            <hr>
+            <option value="Todos los servicios">Todos los servicios</option>
+            <option value="Combo de servicios">Busco combo de servicios</option>
+            <option value="Auditoría Gráfica">Auditoría gráfica</option>
+            <option value="Consultoría Gráfica">Consultoría gráfica</option>
+            <option value="Consultoría Web">Consultoría web</option>
+            <option value="Diseño de Identidad Visual">Diseño de identidad visual</option>
+            <option value="Diseño UI/UX">Diseño de interfaces y experiencia de usuario</option>
+            <option value="Desarrollo de Aplicaciones">Desarrollo de aplicaciones</option>
+            <option value="Aún no lo se">No se que necesito aún</option>
+        </select>
     </div>
     <div class="form-element">
         <textarea name="txtMessage" id="txtMessage" rows="10" placeholder="Mensaje"></textarea>
@@ -39,10 +41,11 @@
         const txtName:any = document.querySelector(`#txtName`);
         const txtEmail:any = document.querySelector(`#txtEmail`);
         const txtCompany:any = document.querySelector(`#txtCompany`);
+        const slServices:any = document.querySelector(`#sl-services`);
         const txtMessage:any = document.querySelector(`#txtMessage`);
         const btnSend:any = document.querySelector(`#btn-send`);
         const WarnArea:any = document.querySelector(`#warnings`);
-
+        
         const isValid = (emailAddress:string) => {
             return emailAddress.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
         };
@@ -51,6 +54,24 @@
             event.preventDefault();
             let warnings:string = '<ul>';
             let flag:boolean = true;
+            let _data:any = {
+                nombre: txtName.value,
+                correo: txtEmail.value,
+                negocio: txtCompany.value,
+                servicios: slServices.value,
+                mensaje: txtMessage.value
+            };
+
+            console.table(_data);
+
+            const sendForm = async (theData:any) => {
+                const response = await fetch('/assets/scripts/c0nt4ct.php', {
+                    method: 'POST',
+                    body: theData
+                });
+                const formStatus = await response.json();
+                console.log(formStatus);
+            }
 
             if ( txtName.value === '' || txtName.value === undefined ){
                 warnings += '<li>Su nombre es requerido para enviar la forma</li>';
@@ -64,6 +85,7 @@
 
             if ( flag ) {
                 WarnArea.innerHTML = '';
+                sendForm(_data);
             } else {
                 warnings += '</ul>';
                 WarnArea.innerHTML = warnings;
@@ -115,13 +137,14 @@
                 }
             }
 
-            input, textarea {
+            input, textarea, select {
                 width: 100%;
                 font-family: var(--bx-ff-poppins);
                 border: 1px solid var(--gray-bixo-color);
                 font-size: 1.2rem;
                 padding: 4px 6px;
                 border-radius: 6px;
+                color: var(--gray-bixo-color);
             }
 
             button {
