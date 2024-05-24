@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form name="contacto" method="post" data-netlify="true">
     <div class="form-element">
         <input type="text" name="txtName" id="txtName" placeholder="Nombre" />
         <div class="asteriks">*</div>
@@ -62,15 +62,17 @@
                 mensaje: txtMessage.value
             };
 
-            console.table(_data);
-
             const sendForm = async (theData:any) => {
-                const response = await fetch('/assets/scripts/c0nt4ct.php', {
+                fetch('/assets/scripts/c0nt4ct.php', {
                     method: 'POST',
+                    headers: {'Content-Type': "application/x-www-form-urlencoded"},
                     body: theData
+                }).then((response) => {
+                    console.log(response);
+                    window.location.href = '/gracias/';
+                }).catch((error) => {
+                    console.log(error);
                 });
-                const formStatus = await response.json();
-                console.log(formStatus);
             }
 
             if ( txtName.value === '' || txtName.value === undefined ){
