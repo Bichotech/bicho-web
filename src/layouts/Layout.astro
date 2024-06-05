@@ -23,10 +23,16 @@ const { title, desc="Agencia interactiva especialista en creación de estrategia
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
 	</head>
 	<body>
+		<div class="white-overlay">[ LOADING... ]</div>
 		<TopNav />
 		<slot />
-
 		<script>
+			window.addEventListener('load', () => {
+				const elOverlay = document.querySelector('.white-overlay') as HTMLElement;
+				console.log(`Loaded!!`);
+				elOverlay.classList.add('good-bye');
+			});
+
 			(() => {
 				`use strict`;
 				const elMenu = document.querySelector('nav') as HTMLElement;

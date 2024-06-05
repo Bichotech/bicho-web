@@ -3,10 +3,13 @@ import LPLayout from "../../layouts/LPLayout.astro";
 import LPHero from "../../components/lpHero.astro";
 import HalfContent from "../../components/halfContent.astro";
 import LPFooter from "../../sections/LPFooter.astro";
+import ServicesBar from "../../sections/servicesBar.astro";
 ---
 
 <LPLayout title="Bichotech: servicio de consultoría gráfica" desc="">
     <LPHero title="Consultoría gráfica" subTitle="Tu brújula hacia una identidad visual efectiva" background="/assets/images/landing-pages/consultoria-grafica/servicio-de-consultoria-grafica.webp" titleColor="#fff" />
+
+    <ServicesBar />
 
     <HalfContent>
         <Fragment slot="image-box">
