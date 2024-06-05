@@ -23,7 +23,9 @@ const { title, desc="Agencia interactiva especialista en creación de estrategia
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<div class="white-overlay">[ LOADING... ]</div>
+		<div class="white-overlay">
+			<div>[ LOADING... ]</div>
+		</div>
 		<TopNav />
 		<slot />
 		<script>
@@ -31,6 +33,12 @@ const { title, desc="Agencia interactiva especialista en creación de estrategia
 				const elOverlay = document.querySelector('.white-overlay') as HTMLElement;
 				console.log(`Loaded!!`);
 				elOverlay.classList.add('good-bye');
+
+				elOverlay.addEventListener('animationend', () => {
+					if ( elOverlay.classList.contains('good-bye') ){
+						elOverlay.remove();
+					}
+				});
 			});
 
 			(() => {

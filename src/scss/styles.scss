@@ -1,3 +1,5 @@
+@use 'animations.scss';
+
 :root {
     --black-color: rgb(33, 33, 33);
     --orange-bixo-color: rgb(255, 51, 0);
@@ -59,9 +61,14 @@ body {
     font-size: 1.3rem;
     letter-spacing: 5px;
     font-family: 'Courier New', Courier, monospace;
+    
+    div {
+        animation: infinite Blinking 0.5s ease-in-out;
+    }
 
     &.good-bye {
-        animation: fadeOut forwards 1.5s ease-in-out;
+        animation: fadeOut forwards 1.2s ease-in-out;
+        // display: none;
     }
 }
 
@@ -349,9 +356,4 @@ section {
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-}
-
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; display: none; }
 }
