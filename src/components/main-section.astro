@@ -1,16 +1,13 @@
 ---
-// COMPONENT: MAIN 
-interface PROPS {
-    title: string;
-    background: string;
-    element: Array<string>;
-}
-const { title, background, element} = Astro.props as PROPS;
+import type { MainSectionProps } from "./interfaces.astro";
+const { title, background, element} = Astro.props as MainSectionProps;
 const backgroundImage = "background-image: url('/assets/images/" + background + "');";
+const pathname = Astro.url.pathname.replaceAll('/', '');
 ---
 
 <section id="__bx-main-section" class="scroll-snap back-image" style={ backgroundImage }>
-    <!-- <div class="overlay"></div> -->
+    { (pathname === 'bichotech' || pathname === 'blog') && <div class="overlay"></div> }
+    
 
     <div class="__bx-paragraph-centered">
         <h2>{title}</h2>
@@ -43,6 +40,11 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
         background-color: var(--black-color);
         background-attachment: fixed;
 
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.45);
+            z-index: 0;
+        }
+
         @media screen and (width < 1600px){
             height: 100%;
         }
@@ -64,25 +66,31 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
 
         .text-decorated {
             position: absolute;
-            width: 40%;
+            width: 55%;
             right: 0;
             opacity: 0.5;
+            perspective: 600px;
 
             @media screen and (width < 1600px){
                 top: 20%;
                 width: 80%;
+                perspective: unset;
             }
 
             .stroke-text {
                 $stroke-width: 2px;
                 $stroke-opacity: 0.5;
-                font-size: 90px;
+                $time-lapse: 1.2s;
+
+                font-size: 160px;
                 font-weight: 600;
                 text-transform: lowercase;
                 -webkit-text-stroke-color: white;
                 -webkit-text-stroke-width: $stroke-width;
                 line-height: 1.2;
                 position: relative;
+                animation: PerspectiveText $time-lapse ease-in-out forwards;
+                animation-delay: 1s;
 
                 @media screen and (width < 1600px){
                     font-size: 40px;
@@ -101,8 +109,10 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
                     -webkit-text-stroke-color: var(--pink-bixo-color);
                     -webkit-text-stroke-width: $stroke-width;
                     position: absolute;
-                    top: 15%;
-                    left: -2%;
+                    animation: DisplacePinkText $time-lapse ease-in-out forwards;
+                    animation-delay: 1s;
+                    top: 0;
+                    left: 0;
                     opacity: $stroke-opacity;
                     @include no-select;
                 }
@@ -112,8 +122,10 @@ const backgroundImage = "background-image: url('/assets/images/" + background + 
                     -webkit-text-stroke-color: var(--teal-bixo-color);
                     -webkit-text-stroke-width: $stroke-width;
                     position: absolute;
-                    top: -15%;
-                    left: 2%;
+                    animation: DisplaceTealText $time-lapse ease-in-out forwards;
+                    animation-delay: 1s;
+                    top: 0;
+                    left: 0;
                     opacity: $stroke-opacity;
                     @include no-select;
                 }

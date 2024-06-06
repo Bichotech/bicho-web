@@ -3,7 +3,7 @@
 import IconBixo from '../assets/images/iconBixo.astro';
 import LogoBixo from '../assets/images/logoBixo.astro';
 
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.replaceAll('/', '');
 ---
 <nav id="desktop-nav">
     <div class="logo">
@@ -366,11 +366,11 @@ const pathname = Astro.url.pathname;
         const menuItem = document.querySelector(`.menu`) as HTMLElement;
         let pathname = menuItem.getAttribute('data-currentPath');
 
-        if ( pathname === '/' ){ (document.querySelector('#home') as HTMLElement).classList.add('selected'); }
-        if ( pathname === '/bichotech/' ){ (document.querySelector('#bichotech') as HTMLElement).classList.add('selected'); }
-        if ( pathname === '/servicios/' ){ (document.querySelector('#servicios') as HTMLElement).classList.add('selected'); }
-        if ( pathname === '/portafolio/' ){ (document.querySelector('#portafolio') as HTMLElement).classList.add('selected'); }
-        if ( pathname === '/contacto/' ){ (document.querySelector('#contacto') as HTMLElement).classList.add('selected'); }
-        if ( pathname === '/blog/' ){ (document.querySelector('#blog') as HTMLElement).classList.add('selected'); }
+        if ( pathname === '' ){ (document.querySelector('#home') as HTMLElement).classList.add('selected'); }
+        if ( pathname === 'bichotech' ){ (document.querySelector('#bichotech') as HTMLElement).classList.add('selected'); }
+        if ( pathname === 'servicios' ){ (document.querySelector('#servicios') as HTMLElement).classList.add('selected'); }
+        if ( pathname === 'portafolio' ){ (document.querySelector('#portafolio') as HTMLElement).classList.add('selected'); }
+        if ( pathname === 'contacto' ){ (document.querySelector('#contacto') as HTMLElement).classList.add('selected'); }
+        if ( pathname === 'blog' ){ (document.querySelector('#blog') as HTMLElement).classList.add('selected'); }
     })();
 </script>

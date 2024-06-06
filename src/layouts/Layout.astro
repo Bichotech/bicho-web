@@ -1,12 +1,9 @@
 --- 
 import '../scss/styles.scss';
 import TopNav from '../components/topnav.astro';
-interface Props {
-	title: string;
-	desc?: string;
-}
+import type { Props } from '../components/interfaces.astro';
 
-const { title, desc="Agencia interactiva especialista en creación de estrategias publicidad y presencia en medios electrónicos." } = Astro.props;
+const { title, desc="Agencia interactiva especialista en creación de estrategias publicidad y presencia en medios electrónicos." } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>

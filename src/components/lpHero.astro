@@ -1,12 +1,6 @@
 ---
-interface PROPS {
-    title: string;
-    subTitle?: string;
-    background: string;
-    titleColor?: string;
-}
-
-const { title, subTitle, background, titleColor="#000" } = Astro.props as PROPS;
+import type { HeroLPProps } from "./interfaces.astro";
+const { title, subTitle, background, titleColor="#000" } = Astro.props as HeroLPProps;
 ---
 
 <header style={{ backgroundImage: `url(${background})` }}>

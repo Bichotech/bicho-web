@@ -1,8 +1,8 @@
 @keyframes fadeOut {
-    0% {
+    from {
         opacity: 1;
     }
-    100% {
+    to {
         opacity: 0;
         background-color:rgb(28,7,36);
         display: none;
@@ -30,5 +30,35 @@
     }
     60% {
         opacity: 1;
+    }
+}
+
+@keyframes PerspectiveText{
+    from {
+        transform: rotateY(0deg);
+    }
+    to  {
+        transform: rotateY(-25deg);
+    }
+}
+
+@keyframes DisplacePinkText {
+    from {
+        top: 0;
+        left: 0;
+    }
+    to {
+        top: 15%;
+        left: -2%;
+    }
+}
+@keyframes DisplaceTealText {
+    from {
+        top: 0;
+        left: 0;
+    }
+    to {
+        top: -15%;
+        left: 2%;
     }
 }

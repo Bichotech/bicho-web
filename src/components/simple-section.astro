@@ -1,6 +1,7 @@
 ---
 // COMPONENT: SIMPLE SECTION
-const { title, subtitle, background } = Astro.props;
+import type { SimpleSectionProps } from "./interfaces.astro";
+const { title, subtitle, background } = Astro.props as SimpleSectionProps;
 ---
 
 <section id="__bx-general-section" class="scroll-snap">

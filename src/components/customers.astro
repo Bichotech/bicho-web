@@ -1,9 +1,6 @@
 ---
-interface PROPS {
-    CustomersArray: Array<string>;
-}
-
-const { CustomersArray } = Astro.props as PROPS;
+import type { CustomerArrayProps } from "./interfaces.astro";
+const { CustomersArray } = Astro.props as CustomerArrayProps;
 ---
 
 <section class="__bixo-phrase change-menu-color scroll-snap">

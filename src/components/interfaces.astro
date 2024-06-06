@@ -1,0 +1,33 @@
+---
+export interface Props {
+	title: string;
+	desc?: string;
+}
+
+// CUSTOMERS COMPONENT --> customers.astro
+export interface CustomerArrayProps {
+    CustomersArray: Array<string>;
+}
+
+// HERO LANDING PAGES --> lpHero.astro
+export interface HeroLPProps {
+    title: string;
+    subTitle?: string;
+    background: string;
+    titleColor?: string;
+}
+
+// MAIN SECTION PROPS --> main-section.astro
+export interface MainSectionProps {
+    title: string;
+    background: string;
+    element: Array<string>;
+}
+
+// SIMPLE SECTION --> simple-section.astro
+export interface SimpleSectionProps {
+    title: string;
+    subtitle: string;
+    background: string;
+}
+---
