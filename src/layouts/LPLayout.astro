@@ -2,14 +2,13 @@
 import '../scss/styles.scss';
 import '../scss/landing-pages.scss';
 import TopNav from '../components/topnav.astro';
-import { ViewTransitions, fade } from 'astro:transitions';
 import type { Props } from '../components/interfaces.astro';
 
 const { title, desc="Agencia interactiva especialista en creación de estrategias publicidad y presencia en medios electrónicos." } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" transition:animate={fade({duration: '0.75s'})}>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={desc}>
@@ -20,13 +19,27 @@ const { title, desc="Agencia interactiva especialista en creación de estrategia
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
-		<ViewTransitions />
 	</head>
 	<body>
+		<div class="white-overlay">
+			<div>[ CARGANDO... ]</div>
+		</div>
 		<TopNav />
 		<slot />
 
 		<script>
+			window.addEventListener('load', () => {
+				const elOverlay = document.querySelector('.white-overlay') as HTMLElement;
+				console.log(`Loaded!!`);
+				elOverlay.classList.add('good-bye');
+
+				elOverlay.addEventListener('animationend', () => {
+					if ( elOverlay.classList.contains('good-bye') ){
+						elOverlay.remove();
+					}
+				});
+			});
+
 			(() => {
 				`use strict`;
 				const elMenu = document.querySelector('nav') as HTMLElement;

@@ -80,7 +80,8 @@ const pathname = Astro.url.pathname.replaceAll('/', '');
             .stroke-text {
                 $stroke-width: 2px;
                 $stroke-opacity: 0.5;
-                $time-lapse: 1.2s;
+                $time-lapse: 1s;
+                $time-delay: 1s;
 
                 font-size: 160px;
                 font-weight: 600;
@@ -90,7 +91,7 @@ const pathname = Astro.url.pathname.replaceAll('/', '');
                 line-height: 1.2;
                 position: relative;
                 animation: PerspectiveText $time-lapse ease-in-out forwards;
-                animation-delay: 1s;
+                animation-delay: $time-delay;
 
                 @media screen and (width < 1600px){
                     font-size: 40px;
@@ -109,8 +110,8 @@ const pathname = Astro.url.pathname.replaceAll('/', '');
                     -webkit-text-stroke-color: var(--pink-bixo-color);
                     -webkit-text-stroke-width: $stroke-width;
                     position: absolute;
-                    animation: DisplacePinkText $time-lapse ease-in-out forwards;
-                    animation-delay: 1s;
+                    animation: DisplacePinkText $time-lapse ease-in-out forwards, Text3D $time-lapse ease-in-out forwards;
+                    animation-delay: $time-delay;
                     top: 0;
                     left: 0;
                     opacity: $stroke-opacity;
@@ -122,8 +123,8 @@ const pathname = Astro.url.pathname.replaceAll('/', '');
                     -webkit-text-stroke-color: var(--teal-bixo-color);
                     -webkit-text-stroke-width: $stroke-width;
                     position: absolute;
-                    animation: DisplaceTealText $time-lapse ease-in-out forwards;
-                    animation-delay: 1s;
+                    animation: DisplaceTealText $time-lapse ease-in-out forwards, Text3D $time-lapse ease-in-out forwards;
+                    animation-delay: $time-delay;
                     top: 0;
                     left: 0;
                     opacity: $stroke-opacity;
