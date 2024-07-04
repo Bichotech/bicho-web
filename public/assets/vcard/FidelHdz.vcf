@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Ing. Fidel Hernández
+N:Hernández;Fidel;;Ing.;
+item1.EMAIL;TYPE=INTERNET:fh@bicho.tech
+item1.X-ABLabel:
+TEL;TYPE=CELL:81 3708 6128
+item2.ORG:BichoTech
+item2.X-ABLabel:
+item3.TITLE:Creatividad y Desarrollo
+item3.X-ABLabel:
+item4.URL:https\://www.bicho.tech
+item4.X-ABLabel:Home Page
+PHOTO:https://www.bicho.tech/assets/images/Bicho Tech - 02.jpg
+CATEGORIES:myContacts
+END:VCARD
