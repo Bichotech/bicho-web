@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Ing. Ernesto Aguirre
+N:Aguirre;Ernesto;;Ing.;
+item1.EMAIL;TYPE=INTERNET:eaguirre@bicho.tech
+item1.X-ABLabel:
+TEL;TYPE=CELL:81 1072 5717
+item2.ORG:BichoTech
+item2.X-ABLabel:
+item3.TITLE:Análisis y Desarrollo
+item3.X-ABLabel:
+item4.URL:https\://www.bicho.tech
+item4.X-ABLabel:Home Page
+PHOTO:https://www.bicho.tech/assets/images/Bicho Tech - 02.jpg
+CATEGORIES:myContacts
+END:VCARD
