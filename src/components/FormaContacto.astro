@@ -29,6 +29,9 @@
         <textarea name="txtMessage" id="txtMessage" rows="10" placeholder="Mensaje"></textarea>
     </div>
     <div class="form-element">
+        <input type="hidden" name="txtBalance" id="txtBalance" />
+    </div>
+    <div class="form-element">
         <div id="warnings"></div>
     </div>
     <div class="form-element">
@@ -41,11 +44,12 @@
         const txtName:any = document.querySelector(`#txtName`);
         const txtEmail:any = document.querySelector(`#txtEmail`);
         const txtCompany:any = document.querySelector(`#txtCompany`);
+        const txtBalance:any = document.querySelector(`#txtBalance`);
         const slServices:any = document.querySelector(`#sl-services`);
         const txtMessage:any = document.querySelector(`#txtMessage`);
         const btnSend:any = document.querySelector(`#btn-send`);
         const WarnArea:any = document.querySelector(`#warnings`);
-        
+
         const isValid = (emailAddress:string) => {
             return emailAddress.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
         };
@@ -61,6 +65,10 @@
                 servicios: slServices.value,
                 mensaje: txtMessage.value
             };
+
+            if ( txtBalance.value !== `` ){
+                return false;
+            }
 
             const sendForm = async (theData:any) => {
                 fetch('/assets/scripts/contact_me.php', {
