@@ -1,0 +1,46 @@
+---
+
+---
+<section id="__bx-general-section" class="scroll-snap half-content change-menu-color">
+    <div class="container">
+        <div class="half-item">
+            <div class="text-box">
+                <slot name="box-1" />
+            </div>
+        </div>
+        <div class="half-item">
+            <div class="text-box bullets">
+                <slot name="box-2" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    section {
+
+        .container {
+            max-width: 1320px;
+            width: 100%;
+            margin: 80px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            @media screen and (width < 750px){
+                grid-template-columns: 1fr;
+            }
+
+            .half-item {
+                position: relative;
+                justify-self: center;
+                align-self: center;
+
+                .text-box {
+                    color: var(--black-color);
+                    display: block;
+                    padding: 30px;
+                }
+            }
+        }
+    }
+</style>

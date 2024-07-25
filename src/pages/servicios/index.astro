@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import MainSection from '../../components/main-section.astro';
 import SimpleSection from '../../components/simple-section.astro';
+import PageSplitted from '../../components/page-splitted.astro';
 ---
 
 <Layout title="Los servicios que tenemos para ti en BichoTech" desc='En BichoTech contamos con una gama de servicios especializados en la comunicación gráfica.'>
@@ -10,10 +11,32 @@ import SimpleSection from '../../components/simple-section.astro';
 			title="En Bichotech nos gusta usar la imaginación y la convertimos en creatividad."
 			background="wall_04.webp"
 			element={['consultoria', 'desarrollo', 'diseño', 'auditoría']} />
+
+	<PageSplitted>
+		<Fragment slot="box-1">
+			<div>
+				<h3>Nuestros servicios</h3>
+			</div>
+		</Fragment>
+		<Fragment slot="box-2">
+			<div>
+				<ul>
+					<li><a href="#auditoria">Auditoría gráfica</a></li>
+					<li><a href="#consultoria-de-marca">Consultoría y asesoría de marca</a></li>
+					<li><a href="#consultoria-web">Consultoría y asesoría web</a></li>
+					<li><a href="#identidad-visual">Diseño de identidad visual</a></li>
+					<li><a href="#interfaces">Diseño de interfaces de usuario</a></li>
+					<li><a href="#aplicaciones">Desarrollo de aplicaciones</a></li>
+					<li><a href="#video">Video y post-producción</a></li>
+				</ul>
+			</div>
+		</Fragment>
+	</PageSplitted>
 	
 	<SimpleSection
 			title="Auditoría gráfica"
 			subtitle=""
+			name="auditoria"
 			background="/assets/images/agent-making-a-graphic-audit.webp">
 			<Fragment slot="SectionContent">
 				<p>Evaluamos la eficacia visual de tu marca o proyecto. Analizamos si los elementos gráficos (logo, tipografía, colores, imágenes) son coherentes entre sí y transmiten el mensaje a tu público objetivo.</p>
@@ -27,16 +50,24 @@ import SimpleSection from '../../components/simple-section.astro';
 			</Fragment>
 	</SimpleSection>
 	<SimpleSection
-			title="Consultoría gráfica"
+			title="Consultoría y asesoría de marca"
 			subtitle=""
+			name="consultoria-de-marca"
 			background="/assets/images/bixo-personal-evaluating-strategies.webp">
 			<Fragment slot="SectionContent">
-				<p>Este servicio es para por si ya cuentas con un departamento o área de diseño pero buscas una dirección creativa diferente. Te ofrecemos asesoramiento y soluciones en diseño gráfico para tu negocio o empresa. Nos encargamos de crear estrategias visuales que ayuden a alcanzar los objetivos de comunicación como marca.</p>
-				<p><strong>Ejemplo de este servicio:</strong></p>
+				<p>¿Quieres que tu marca cause un impacto duradero?</p>
+				<p>Nuestra consultoría en diseño gráfico te ayudará a:</p>
 				<ul>
-					<li>Dirección de la marca.</li>
-					<li>Asesoramiento para la comunicación visual y no visual.</li>
-					<li>Capacitación a tu equipo de diseño.</li>
+					<li>Desarrollar una identidad visual única: Que te distinga de la competencia y conecte con tu público.</li>
+					<li>Fortalecer tu estrategia de comunicación: Alineamos tu diseño con tus objetivos de negocio.</li>
+					<li>Optimizar tus recursos: Trabajamos en conjunto con tu equipo de diseño para obtener los mejores resultados.</li>
+				</ul>
+				<p><strong>Beneficios:</strong></p>
+				<ul>
+					<li>Identidad de Marca Única y Memorable</li>
+					<li>Mayor Cohesión y Consistencia</li>
+					<li>Mejor Comunicación con el Público</li>
+					<li>Mayor Retorno de la Inversión (ROI)</li>
 				</ul>
 				<a href="/servicios/consultoria-grafica" class="base-btn">Ver más información</a>
 			</Fragment>
@@ -44,6 +75,7 @@ import SimpleSection from '../../components/simple-section.astro';
 	<SimpleSection
 			title="Consultoría Web"
 			subtitle=""
+			name="consultoria-web"
 			background="/assets/images/bixo-agent-analyzing-a-website.webp">
 			<Fragment slot="SectionContent">
 				<p>Te ofrecemeos asesoramiento y soluciones en la creación, gestión y optimización de sitios y aplicaciones web. Nos encarga de analizar tus necesidades y te proponemos las soluciones más adecuadas.</p>
@@ -61,6 +93,7 @@ import SimpleSection from '../../components/simple-section.astro';
 	<SimpleSection
 			title="Diseño de identidad visual"
 			subtitle=""
+			name="identidad-visual"
 			background="/assets/images/bixo-agent-creating-a-logo.webp">
 			<Fragment slot="SectionContent">
 				<p>El diseño de identidad visual es el proceso de crear una representación gráfica de una marca o proyecto. Esta representación incluye elementos como el logotipo, la tipografía, la paleta de colores y las imágenes. El objetivo es crear una imagen coherente y memorable que transmita la esencia de tu marca al público objetivo.</p>
@@ -81,8 +114,9 @@ import SimpleSection from '../../components/simple-section.astro';
 			</Fragment>
 	</SimpleSection>
 	<SimpleSection
-			title="Diseño de interfaces de usuario"
+			title="Diseño de interfaces y experiencia de usuario"
 			subtitle=""
+			name="interfaces"
 			background="/assets/images/bixo-agent-creating-an-interface-for-an-app.webp">
 			<Fragment slot="SectionContent">
 				<p>El diseño de interfaces de usuario (UI) es el proceso de crear interfaces gráficas que sean fáciles de usar y agradables visualmente. Esto implica el diseño de elementos como la estructura de la información, la navegación, los formularios, los botones y los iconos. El objetivo es crear una interfaz que sea intuitiva y eficiente, y que ayude al usuario realizar las tareas que desea de forma rápida y sencilla.</p>
@@ -106,8 +140,9 @@ import SimpleSection from '../../components/simple-section.astro';
 			</Fragment>
 	</SimpleSection>
 	<SimpleSection
-			title="Desarrollo de aplicaciones web"
+			title="Desarrollo de aplicaciones"
 			subtitle=""
+			name="aplicaciones"
 			background="/assets/images/bixo-agent-reviewing-an-app.webp">
 			<Fragment slot="SectionContent">
 				<p>El desarrollo de aplicaciones web es el proceso de crear software que se ejecuta en un navegador web. Este software puede ser utilizado para realizar una gran variedad de tareas y no requiere instalación en el dispositivo del usuario.</p>
@@ -118,6 +153,23 @@ import SimpleSection from '../../components/simple-section.astro';
 					<li><strong>Progresivas</strong>: Son aplicaciones web que se pueden instalar en el dispositivo del usuario y que funcionan como una aplicación nativa.</li>
 				</ul>
 				<a href="/servicios/desarrollo-de-aplicaciones" class="base-btn">Ver más información</a>
+			</Fragment>
+	</SimpleSection>
+	<SimpleSection
+			title="Video y post-producción"
+			subtitle=""
+			name="video"
+			background="/assets/images/bixo-agent-recording-an-event.webp">
+			<Fragment slot="SectionContent">
+				<p>Imagina que haces una película casera. Grabas todas las escenas, pero aún falta mucho para que quede como quieres.</p>
+				<p>La post-producción es como editar esa película casera, pero con herramientas profesionales. Aquí es donde se unen todas las piezas:</p>
+				<ul>
+					<li><strong>Edición</strong>: Cortar y pegar las partes de video que quieres que se vean, ordenarlas y crear una historia fluida.</li>
+					<li><strong>Efectos especiales</strong>: Agregar explosiones, personajes animados o cualquier elemento fantástico que quieras incluir.</li>
+					<li><strong>Corrección de color</strong>: Ajustar los colores para que la imagen se vea más real o tenga un estilo particular (por ejemplo, más oscura para una película de terror).</li>
+					<li><strong>Sonido</strong>: Agregar música, efectos de sonido y voces para crear una atmósfera y complementar las imágenes.</li>
+				</ul>
+				<a href="/servicios/video-y-post-produccion" class="base-btn">Ver más información</a>
 			</Fragment>
 	</SimpleSection>
 </Layout>

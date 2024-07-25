@@ -1,10 +1,13 @@
 ---
 // COMPONENT: SIMPLE SECTION
 import type { SimpleSectionProps } from "./interfaces.astro";
-const { title, subtitle, background } = Astro.props as SimpleSectionProps;
+const { title, subtitle, background, name='' } = Astro.props as SimpleSectionProps;
 ---
 
 <section id="__bx-general-section" class="scroll-snap">
+    { name !== '' &&
+        <div id={ name }></div>
+    }
     <div class="__bixo-element">
         <div class="__bx-paragraph-centered">
             { subtitle !== '' && <h6>&mdash; {subtitle}</h6> }
