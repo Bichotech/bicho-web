@@ -202,6 +202,28 @@ section {
         padding: 0;
     }
 
+    .text-box {
+        color: var(--black-color);
+        display: block;
+        padding: 30px;
+
+        &.bullets {
+            ul {
+                li {
+                    line-height: 5rem;
+                    a {
+                        font-size: 1.6rem;
+                        color: var(--orange-bixo-color);
+
+                        &:hover {
+                            color: var(--gray-bixo-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .__bx-paragraph-centered {
         max-width: 60rem;
         position: relative;
