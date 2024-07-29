@@ -21,6 +21,10 @@ import WhiteSection from '../../components/white-section.astro';
 		<div class="container">
             <div class="procesos">
                 <h4>Proceso:<br />Auditoría gráfica</h4>
+                <div class="image">
+                    <img src="/assets/images/procesos/bx-auditoria-grafica.webp" class="desktop-version" alt="">
+                    <img src="/assets/images/procesos/bm-auditoria-grafica.webp" class="mobile-version" alt="">
+                </div>
             </div>
 		</div>
 	</section>
@@ -39,18 +43,28 @@ import WhiteSection from '../../components/white-section.astro';
     }
     .procesos {
         color: white;
-        background-image: url('/assets/images/procesos/bx-auditoria-grafica.webp');
         display: block;
         width: 100%;
         height: 100%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
+
+        .desktop-version {
+            display: block;
+            width: 100%;
+        }
+
+        .mobile-version {
+            display: none;
+            width: 100%;
+        }
 
         @media screen and (width < 1600px){
-            background-image: url('/assets/images/procesos/bm-auditoria-grafica.webp');
-            height: 1040px;
-            background-position: bottom center;
+            .desktop-version {
+                display: none;
+            }
+
+            .mobile-version {
+                display: block;
+            }
         }
     }
 </style>
