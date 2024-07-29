@@ -16,4 +16,41 @@ import WhiteSection from '../../components/white-section.astro';
             <h3>Estamos diseñando los documentos para mostrartelo en nuestro sitio.</h3>
         </Fragment>
     </WhiteSection>
+
+    <section class="black-background scroll-snap">
+		<div class="container">
+            <div class="procesos">
+                <h4>Proceso:<br />Auditoría gráfica</h4>
+            </div>
+		</div>
+	</section>
 </Layout>
+
+<style lang="scss">
+    .black-background {
+        @media screen and (width < 1600px){
+            padding: 30px 10px;
+        }
+    }
+    .container {
+        display: block !important;
+        width: 100%;
+        height: 100%;
+    }
+    .procesos {
+        color: white;
+        background-image: url('/assets/images/procesos/bx-auditoria-grafica.webp');
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+
+        @media screen and (width < 1600px){
+            background-image: url('/assets/images/procesos/bm-auditoria-grafica.webp');
+            height: 1040px;
+            background-position: bottom center;
+        }
+    }
+</style>
