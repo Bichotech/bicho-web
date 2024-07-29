@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MainSection from '../../components/main-section.astro';
+import SimpleSection from '../../components/simple-section.astro';
+import PageSplitted from '../../components/page-splitted.astro';
+import LPLayout from '../../layouts/LPLayout.astro';
+---
+
+<LPLayout title="Los servicios que tenemos para ti en BichoTech" desc='En BichoTech contamos con una gama de servicios especializados en la comunicación gráfica.'>
+    <header>
+        <h3>Nuestros servicios</h3>
+    </header>
+
+    <div class="list-services">
+        <ul>
+            <li><a href="#auditoria">Auditoría gráfica</a></li>
+            <li><a href="#consultoria-de-marca">Consultoría y asesoría de marca</a></li>
+            <li><a href="#consultoria-web">Consultoría y asesoría web</a></li>
+            <li><a href="#identidad-visual">Diseño de identidad visual</a></li>
+            <li><a href="#interfaces">Diseño de interfaces de usuario</a></li>
+            <li><a href="#aplicaciones">Desarrollo de aplicaciones</a></li>
+            <li><a href="#video">Video y post-producción</a></li>
+        </ul>
+    </div>
+</LPLayout>
+
+<style lang="scss">
+    header {
+        min-height: 250px;
+        background-color: #313131;
+        position: relative;
+        background-image: url('/assets/images/wall_04.webp');
+        background-size: cover;
+        background-position: bottom center;
+
+        h3 {
+            display: block;
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+    }
+    .list-services {
+        padding: 3rem;
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                padding: 0;
+                margin: 0;
+                line-height: 4rem !important;
+
+                a {
+                    color: var(--orange-bixo-color);
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+</style>
