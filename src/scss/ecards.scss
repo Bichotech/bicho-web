@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-family: "Bebas Neue", Helvetica, sans-serif;
     background-color: rgba(21, 21, 21, 1);
     display: block;
     position: relative;
@@ -49,16 +49,17 @@ body {
     width: 100%;
     min-width: 40rem;
   
-    background-image: linear-gradient(to bottom, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1)), url(/assets/images/Background.svg);
+    background-image: linear-gradient(to bottom, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1)), url(/assets/images/ecard/graffiti.webp);
     background-size: cover;
+    background-position: bottom;
   }
   
   .ecard-logo {
-    background-color: rgba(21, 21, 21, 1);
-    padding: 3rem;
+    display: block;
+    padding: 0;
     box-sizing: border-box;
     border-radius: 3.5rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-bottom: 1.69rem;
     text-align: center;
     min-width: 40rem;
@@ -66,11 +67,11 @@ body {
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
+    filter: drop-shadow(0 15px 5px #000000);
   
     @media (max-width: 25rem) {
-      min-width: 30rem;
       img {
-        width: 95%;
+        width: 90%;
       }
     }
   }
@@ -81,6 +82,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+    margin-top: 2rem;
   
     p {
       font-size: 5rem;
@@ -118,7 +120,7 @@ body {
       font-weight: 700;
   
       span {
-        font-family: Arial;
+        font-family: Helvetica, Arial, sans-serif;
         margin-left: 1rem;
         font-size: 1.8rem;
         color: rgba(255, 255, 255, 1);
@@ -163,8 +165,9 @@ body {
       text-decoration: none;
       color: rgba(255, 255, 255, 1);
       text-transform: uppercase;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       transition: all .2s ease-in-out;
+      font-family: Helvetica, sans-serif;
     }
   
     i {
