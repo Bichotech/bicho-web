@@ -6,7 +6,14 @@ const { CustomersArray } = Astro.props as CustomerArrayProps;
 <section class="__bixo-phrase change-menu-color scroll-snap">
     <div class="customer-logos">
         {CustomersArray.map( (value:string) => (
-            <div class="logo"><img src={`/assets/images/customers/${value[0]}`} alt={value[1]} /></div>
+            <div class="logo">
+                { value[2] !== '' &&
+                    <a href={ value[2] }><img src={`/assets/images/customers/${value[0]}`} alt={ value[1] } /></a>
+                }
+                { value[2] === '' &&
+                    <img src={`/assets/images/customers/${value[0]}`} alt={ value[1] } />
+                }
+            </div>
         ))}
     </div>
 </section>
